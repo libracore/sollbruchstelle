@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include sollbruchstelle *.css
+recursive-include sollbruchstelle *.csv
+recursive-include sollbruchstelle *.html
+recursive-include sollbruchstelle *.ico
+recursive-include sollbruchstelle *.js
+recursive-include sollbruchstelle *.json
+recursive-include sollbruchstelle *.md
+recursive-include sollbruchstelle *.png
+recursive-include sollbruchstelle *.py
+recursive-include sollbruchstelle *.svg
+recursive-include sollbruchstelle *.txt
+recursive-exclude sollbruchstelle *.pyc
