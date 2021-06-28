@@ -1,0 +1,249 @@
+{
+ "allow_rename": 1,
+ "autoname": "field:object_name",
+ "creation": "2021-06-28 13:24:38.487489",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title_section",
+  "object_name",
+  "adresse_section",
+  "city",
+  "street",
+  "column_break_28",
+  "pin_code",
+  "country",
+  "details",
+  "size",
+  "height",
+  "price",
+  "bodenbelag",
+  "usage_type",
+  "public",
+  "people",
+  "time_of_use",
+  "notes",
+  "column_break_12",
+  "rentable",
+  "balcony",
+  "electricity",
+  "sink",
+  "closet",
+  "sun",
+  "rented",
+  "wheelchair_accessible",
+  "internet",
+  "parking_outdoor",
+  "parking_indoor",
+  "acces_public_transport",
+  "elevator_people",
+  "elevator_goods"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "rentable",
+   "fieldtype": "Check",
+   "label": "Vermietbar"
+  },
+  {
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "label": "Gr\u00f6sse (QM)"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Raum H\u00f6he"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Data",
+   "label": "Preis"
+  },
+  {
+   "default": "0",
+   "fieldname": "sun",
+   "fieldtype": "Check",
+   "label": "Sonnenseite"
+  },
+  {
+   "default": "0",
+   "fieldname": "sink",
+   "fieldtype": "Check",
+   "label": "Lavabo"
+  },
+  {
+   "default": "0",
+   "fieldname": "closet",
+   "fieldtype": "Check",
+   "label": "Einbauschr\u00e4nke"
+  },
+  {
+   "fieldname": "people",
+   "fieldtype": "Data",
+   "label": "Anzahl Personen"
+  },
+  {
+   "default": "0",
+   "fieldname": "balcony",
+   "fieldtype": "Check",
+   "label": "Balkon"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "electricity",
+   "fieldtype": "Check",
+   "label": "Strom"
+  },
+  {
+   "default": "0",
+   "fieldname": "rented",
+   "fieldtype": "Check",
+   "label": "Vermietet"
+  },
+  {
+   "fieldname": "public",
+   "fieldtype": "Data",
+   "label": "\u00d6ffentlich zug\u00e4nglich"
+  },
+  {
+   "default": "0",
+   "fieldname": "wheelchair_accessible",
+   "fieldtype": "Check",
+   "label": "Rollstuhlg\u00e4ngig"
+  },
+  {
+   "default": "0",
+   "fieldname": "internet",
+   "fieldtype": "Check",
+   "label": "Internet"
+  },
+  {
+   "default": "0",
+   "fieldname": "parking_outdoor",
+   "fieldtype": "Check",
+   "label": "Parkpl\u00e4tze aussen"
+  },
+  {
+   "default": "0",
+   "fieldname": "parking_indoor",
+   "fieldtype": "Check",
+   "label": "Garageneinstellpl\u00e4tze"
+  },
+  {
+   "default": "0",
+   "fieldname": "acces_public_transport",
+   "fieldtype": "Check",
+   "label": "Anschluss an \u00f6ffentliche Verkehrsmittel"
+  },
+  {
+   "fieldname": "time_of_use",
+   "fieldtype": "Data",
+   "label": "Zeit der Zwischennutzung (Tage)"
+  },
+  {
+   "default": "0",
+   "fieldname": "elevator_people",
+   "fieldtype": "Check",
+   "label": "Personenlift"
+  },
+  {
+   "default": "0",
+   "fieldname": "elevator_goods",
+   "fieldtype": "Check",
+   "label": "Warenlift"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Bemerkungen"
+  },
+  {
+   "fieldname": "adresse_section",
+   "fieldtype": "Section Break",
+   "label": "Adresse"
+  },
+  {
+   "fieldname": "street",
+   "fieldtype": "Data",
+   "label": "Strasse"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "Stadt"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pin_code",
+   "fieldtype": "Data",
+   "label": "PLZ"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Land",
+   "options": "Country"
+  },
+  {
+   "fieldname": "title_section",
+   "fieldtype": "Section Break",
+   "label": "Title"
+  },
+  {
+   "fieldname": "object_name",
+   "fieldtype": "Data",
+   "label": "Name Mietobjekt",
+   "unique": 1
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "bodenbelag",
+   "fieldtype": "Link",
+   "label": "Bodenbelag",
+   "options": "Bodenbelag"
+  },
+  {
+   "fieldname": "usage_type",
+   "fieldtype": "Link",
+   "label": "Nutzungsart",
+   "options": "Nutzungsart"
+  }
+ ],
+ "modified": "2021-06-28 13:44:33.162362",
+ "modified_by": "Administrator",
+ "module": "Sollbruchstelle",
+ "name": "Mietobjekt",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
