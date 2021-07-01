@@ -8,6 +8,7 @@
  "field_order": [
   "title_section",
   "object_name",
+  "total_object",
   "adresse_section",
   "city",
   "street",
@@ -15,6 +16,8 @@
   "pin_code",
   "country",
   "details",
+  "floor",
+  "floor_surcharge",
   "size",
   "height",
   "price",
@@ -50,17 +53,17 @@
   {
    "fieldname": "size",
    "fieldtype": "Data",
-   "label": "Gr\u00f6sse (QM)"
+   "label": "Gr\u00f6sse [m2]"
   },
   {
    "fieldname": "height",
    "fieldtype": "Data",
-   "label": "Raum H\u00f6he"
+   "label": "Raum H\u00f6he [m]"
   },
   {
    "fieldname": "price",
-   "fieldtype": "Data",
-   "label": "Preis"
+   "fieldtype": "Currency",
+   "label": "Preis CHF / Monat"
   },
   {
    "default": "0",
@@ -221,9 +224,25 @@
    "fieldtype": "Link",
    "label": "Nutzungsart",
    "options": "Nutzungsart"
+  },
+  {
+   "fieldname": "total_object",
+   "fieldtype": "Link",
+   "label": "Gesamtobjekt",
+   "options": "Gesamtobjekt"
+  },
+  {
+   "fieldname": "floor",
+   "fieldtype": "Data",
+   "label": "Stockwerk"
+  },
+  {
+   "fieldname": "floor_surcharge",
+   "fieldtype": "Percent",
+   "label": "Stockwerkszuschlag [%]"
   }
  ],
- "modified": "2021-06-28 13:44:33.162362",
+ "modified": "2021-06-30 15:12:59.140903",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietobjekt",
