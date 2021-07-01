@@ -9,12 +9,11 @@
   "title_section",
   "object_name",
   "total_object",
+  "street_nr",
+  "column_break_4",
+  "reference_nr",
   "adresse_section",
-  "city",
-  "street",
   "column_break_28",
-  "pin_code",
-  "country",
   "details",
   "floor",
   "floor_surcharge",
@@ -173,29 +172,8 @@
    "label": "Adresse"
   },
   {
-   "fieldname": "street",
-   "fieldtype": "Data",
-   "label": "Strasse"
-  },
-  {
-   "fieldname": "city",
-   "fieldtype": "Data",
-   "label": "Stadt"
-  },
-  {
    "fieldname": "column_break_28",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "pin_code",
-   "fieldtype": "Data",
-   "label": "PLZ"
-  },
-  {
-   "fieldname": "country",
-   "fieldtype": "Link",
-   "label": "Land",
-   "options": "Country"
   },
   {
    "fieldname": "title_section",
@@ -240,9 +218,27 @@
    "fieldname": "floor_surcharge",
    "fieldtype": "Percent",
    "label": "Stockwerkszuschlag [%]"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reference_nr",
+   "fieldtype": "Data",
+   "label": "Referenznummer"
+  },
+  {
+   "description": "immer 2-stellig, bsp 5: 05",
+   "fetch_from": "total_object.street_nr",
+   "fieldname": "street_nr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Hausnummer",
+   "read_only": 1
   }
  ],
- "modified": "2021-06-30 15:12:59.140903",
+ "modified": "2021-07-01 11:42:09.396079",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietobjekt",

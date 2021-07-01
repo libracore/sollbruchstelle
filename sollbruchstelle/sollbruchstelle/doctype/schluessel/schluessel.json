@@ -1,0 +1,43 @@
+{
+ "creation": "2021-07-01 10:44:14.183772",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "key_type",
+  "key_nr",
+  "door_nr"
+ ],
+ "fields": [
+  {
+   "fieldname": "key_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Schl\u00fcsselart",
+   "options": "Badge\nSchl\u00fcssel"
+  },
+  {
+   "fieldname": "key_nr",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Schl\u00fcssel-Nr."
+  },
+  {
+   "fieldname": "door_nr",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Raum-Nr."
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-07-01 10:47:00.377473",
+ "modified_by": "Administrator",
+ "module": "Sollbruchstelle",
+ "name": "Schluessel",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

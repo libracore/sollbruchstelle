@@ -8,9 +8,12 @@
   "total_object",
   "address_section",
   "street",
+  "street_nr",
   "zip_code",
   "city",
-  "to_date"
+  "to_date",
+  "column_break_7",
+  "notes"
  ],
  "fields": [
   {
@@ -43,9 +46,23 @@
    "fieldname": "to_date",
    "fieldtype": "Date",
    "label": "Bis"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Bemerkungen"
+  },
+  {
+   "fieldname": "street_nr",
+   "fieldtype": "Data",
+   "label": "Hausnummer"
   }
  ],
- "modified": "2021-06-30 14:58:12.210345",
+ "modified": "2021-07-01 08:31:49.339934",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Gesamtobjekt",
