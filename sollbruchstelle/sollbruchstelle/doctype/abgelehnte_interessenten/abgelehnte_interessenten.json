@@ -1,0 +1,42 @@
+{
+ "creation": "2021-07-02 16:08:26.156860",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "rejected_prospects",
+  "customer",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Abgelehnt",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Bemerkungen"
+  },
+  {
+   "fieldname": "rejected_prospects",
+   "fieldtype": "Data",
+   "label": "Abgelehnte Interessenten"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-07-02 16:09:47.717337",
+ "modified_by": "Administrator",
+ "module": "Sollbruchstelle",
+ "name": "Abgelehnte Interessenten",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

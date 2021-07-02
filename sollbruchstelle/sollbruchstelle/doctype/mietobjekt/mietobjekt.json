@@ -40,7 +40,9 @@
   "parking_indoor",
   "acces_public_transport",
   "elevator_people",
-  "elevator_goods"
+  "elevator_goods",
+  "rejected_prospects_section",
+  "rejected_prospects"
  ],
  "fields": [
   {
@@ -163,7 +165,7 @@
   },
   {
    "fieldname": "notes",
-   "fieldtype": "Text",
+   "fieldtype": "Small Text",
    "label": "Bemerkungen"
   },
   {
@@ -236,9 +238,20 @@
    "hidden": 1,
    "label": "Hausnummer",
    "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "rejected_prospects_section",
+   "fieldtype": "Section Break",
+   "label": "Abgelehnte Interessenten"
+  },
+  {
+   "fieldname": "rejected_prospects",
+   "fieldtype": "Table",
+   "options": "Abgelehnte Interessenten"
   }
  ],
- "modified": "2021-07-01 11:42:09.396079",
+ "modified": "2021-07-02 16:03:58.988421",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietobjekt",

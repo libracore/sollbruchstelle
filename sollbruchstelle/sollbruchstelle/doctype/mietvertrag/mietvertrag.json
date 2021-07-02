@@ -6,10 +6,11 @@
  "engine": "InnoDB",
  "field_order": [
   "agreement_type",
-  "object_name",
   "column_break_3",
   "total_object",
   "customer",
+  "object_section",
+  "mietobjekte",
   "section_break_2",
   "title",
   "contract_start",
@@ -19,11 +20,6 @@
   "column_break_7",
   "status",
   "tenant_type",
-  "mailbox",
-  "door_label",
-  "outside_label",
-  "room_cleaning",
-  "internet",
   "section_break_16",
   "key_title",
   "termination_section",
@@ -42,12 +38,6 @@
    "label": "Customer",
    "options": "Customer",
    "read_only": 1
-  },
-  {
-   "fieldname": "object_name",
-   "fieldtype": "Link",
-   "label": "Mietobjekt",
-   "options": "Mietobjekt"
   },
   {
    "fieldname": "tenant_type",
@@ -75,36 +65,6 @@
    "fieldtype": "Table",
    "label": "Schluessel",
    "options": "Schluessel"
-  },
-  {
-   "default": "0",
-   "fieldname": "mailbox",
-   "fieldtype": "Check",
-   "label": "Briefkasten"
-  },
-  {
-   "default": "0",
-   "fieldname": "door_label",
-   "fieldtype": "Check",
-   "label": "T\u00fcrbeschriftung"
-  },
-  {
-   "default": "0",
-   "fieldname": "outside_label",
-   "fieldtype": "Check",
-   "label": "Aussenbeschriftung"
-  },
-  {
-   "default": "0",
-   "fieldname": "room_cleaning",
-   "fieldtype": "Check",
-   "label": "Raumreinigung"
-  },
-  {
-   "default": "0",
-   "fieldname": "internet",
-   "fieldtype": "Check",
-   "label": "Internet"
   },
   {
    "fieldname": "rent_liability",
@@ -157,9 +117,20 @@
    "fieldname": "termination_date",
    "fieldtype": "Date",
    "label": "Kuendigungsdatum"
+  },
+  {
+   "fieldname": "object_section",
+   "fieldtype": "Section Break",
+   "label": "Mietobjekte"
+  },
+  {
+   "fieldname": "mietobjekte",
+   "fieldtype": "Table",
+   "label": "Mietobjekte",
+   "options": "Mietobjekte"
   }
  ],
- "modified": "2021-07-01 12:10:06.375573",
+ "modified": "2021-07-02 16:43:21.278213",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",
