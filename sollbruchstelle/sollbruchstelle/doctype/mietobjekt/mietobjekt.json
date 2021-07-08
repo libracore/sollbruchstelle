@@ -42,7 +42,9 @@
   "elevator_people",
   "elevator_goods",
   "rejected_prospects_section",
-  "rejected_prospects"
+  "rejected_prospects",
+  "schluessel_section",
+  "schluesselvergabe"
  ],
  "fields": [
   {
@@ -249,10 +251,22 @@
   {
    "fieldname": "rejected_prospects",
    "fieldtype": "Table",
+   "label": "Abgelehnte Interessenten",
    "options": "Abgelehnte Interessenten"
+  },
+  {
+   "fieldname": "schluessel_section",
+   "fieldtype": "Section Break",
+   "label": "Schl\u00fcssel"
+  },
+  {
+   "fieldname": "schluesselvergabe",
+   "fieldtype": "Table",
+   "label": "Schl\u00fcsselvergabe",
+   "options": "Schluesselvergabe"
   }
  ],
- "modified": "2021-07-07 15:31:55.903042",
+ "modified": "2021-07-08 13:52:24.367239",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietobjekt",

@@ -20,9 +20,7 @@
   "column_break_7",
   "status",
   "tenant_type",
-  "usage",
-  "section_break_16",
-  "key_title",
+  "usage_type",
   "usage_section",
   "shared_use_temp",
   "shared_use",
@@ -65,12 +63,6 @@
    "label": "Depoth\u00f6he"
   },
   {
-   "fieldname": "key_title",
-   "fieldtype": "Table",
-   "label": "Schluessel",
-   "options": "Schluessel"
-  },
-  {
    "fieldname": "rent_liability",
    "fieldtype": "Date",
    "label": "Mietzinshaftung"
@@ -84,10 +76,6 @@
   {
    "fieldname": "column_break_7",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_16",
-   "fieldtype": "Section Break"
   },
   {
    "fieldname": "agreement_type",
@@ -134,11 +122,6 @@
    "options": "Mietobjekte"
   },
   {
-   "fieldname": "usage",
-   "fieldtype": "Data",
-   "label": "Verwendungszweck"
-  },
-  {
    "fieldname": "usage_section",
    "fieldtype": "Section Break",
    "label": "Benutzung"
@@ -153,9 +136,15 @@
    "fieldtype": "Link",
    "label": "Mitbenutzungsrechte Vorlage",
    "options": "Mitbenutzungsrechte"
+  },
+  {
+   "fieldname": "usage_type",
+   "fieldtype": "Link",
+   "label": "Verwendungszweck",
+   "options": "Nutzungsart"
   }
  ],
- "modified": "2021-07-07 14:58:01.782474",
+ "modified": "2021-07-08 13:55:10.310812",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",
