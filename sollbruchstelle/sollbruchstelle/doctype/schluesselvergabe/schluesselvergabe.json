@@ -4,6 +4,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "room",
   "schluessel",
   "customer"
  ],
@@ -21,10 +22,17 @@
    "in_list_view": 1,
    "label": "Kunde",
    "options": "Customer"
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Raum",
+   "options": "Raum"
   }
  ],
  "istable": 1,
- "modified": "2021-07-08 13:52:46.834991",
+ "modified": "2021-07-08 16:44:45.671478",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Schluesselvergabe",

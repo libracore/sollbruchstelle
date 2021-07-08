@@ -1,30 +1,14 @@
 {
- "autoname": "field:key_nr",
- "creation": "2021-07-01 10:44:14.183772",
+ "autoname": "field:room",
+ "creation": "2021-07-08 16:34:23.023309",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "object_name",
-  "room",
-  "key_type",
-  "key_nr"
+  "room"
  ],
  "fields": [
-  {
-   "fieldname": "key_type",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Schl\u00fcsselart",
-   "options": "Badge\nSchl\u00fcssel"
-  },
-  {
-   "fieldname": "key_nr",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Schl\u00fcssel-Nr.",
-   "unique": 1
-  },
   {
    "fieldname": "object_name",
    "fieldtype": "Link",
@@ -33,15 +17,16 @@
   },
   {
    "fieldname": "room",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Raum",
-   "options": "Raum"
+   "unique": 1
   }
  ],
- "modified": "2021-07-08 16:41:18.018256",
+ "modified": "2021-07-08 16:34:23.023309",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
- "name": "Schluessel",
+ "name": "Raum",
  "owner": "Administrator",
  "permissions": [
   {

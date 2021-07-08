@@ -6,5 +6,5 @@ from __future__ import unicode_literals
 # import frappe
 import unittest
 
-class TestMitbenutzungsrechte(unittest.TestCase):
+class TestRaum(unittest.TestCase):
 	pass

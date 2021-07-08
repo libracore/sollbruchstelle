@@ -6,7 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "titel",
-  "shared_use"
+  "terms"
  ],
  "fields": [
   {
@@ -16,15 +16,15 @@
    "unique": 1
   },
   {
-   "fieldname": "shared_use",
+   "fieldname": "terms",
    "fieldtype": "Text Editor",
-   "label": "Mitbenutzung Vorlage"
+   "label": "Terms and Conditions"
   }
  ],
- "modified": "2021-07-07 14:41:18.355651",
+ "modified": "2021-07-08 15:58:50.512144",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
- "name": "Mitbenutzungsrechte",
+ "name": "Terms",
  "owner": "Administrator",
  "permissions": [
   {
@@ -42,6 +42,5 @@
  ],
  "quick_entry": 1,
  "sort_field": "modified",
- "sort_order": "DESC",
- "track_changes": 1
+ "sort_order": "DESC"
 }

@@ -21,9 +21,9 @@
   "status",
   "tenant_type",
   "usage_type",
-  "usage_section",
-  "shared_use_temp",
-  "shared_use",
+  "terms_section",
+  "tc_name",
+  "terms",
   "termination_section",
   "termination_date"
  ],
@@ -122,29 +122,28 @@
    "options": "Mietobjekte"
   },
   {
-   "fieldname": "usage_section",
-   "fieldtype": "Section Break",
-   "label": "Benutzung"
-  },
-  {
-   "fieldname": "shared_use",
-   "fieldtype": "Text Editor",
-   "label": "Mitbenutzung Inhalt"
-  },
-  {
-   "fieldname": "shared_use_temp",
-   "fieldtype": "Link",
-   "label": "Mitbenutzungsrechte Vorlage",
-   "options": "Mitbenutzungsrechte"
-  },
-  {
    "fieldname": "usage_type",
    "fieldtype": "Link",
-   "label": "Verwendungszweck",
+   "label": "Nutzungsart",
    "options": "Nutzungsart"
+  },
+  {
+   "fieldname": "terms_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tc_name",
+   "fieldtype": "Link",
+   "label": "Gesch\u00e4ftsbedingung Vorlagen",
+   "options": "Terms"
+  },
+  {
+   "fieldname": "terms",
+   "fieldtype": "Text Editor",
+   "label": "Gesch\u00e4ftsbed. Details"
   }
  ],
- "modified": "2021-07-08 13:55:10.310812",
+ "modified": "2021-07-08 16:02:34.102392",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",
