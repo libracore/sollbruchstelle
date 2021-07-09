@@ -1,32 +1,24 @@
 {
- "autoname": "field:room",
- "creation": "2021-07-08 16:34:23.023309",
+ "autoname": "field:title",
+ "creation": "2021-07-09 08:05:33.350063",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "object_name",
-  "room"
+  "title"
  ],
  "fields": [
   {
-   "fieldname": "object_name",
-   "fieldtype": "Link",
-   "label": "Mietobjekt",
-   "options": "Mietobjekt"
-  },
-  {
-   "fieldname": "room",
+   "fieldname": "title",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Raum",
+   "label": "Stockwerk",
    "unique": 1
   }
  ],
- "modified": "2021-07-08 16:34:23.023309",
+ "modified": "2021-07-09 08:05:33.350063",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
- "name": "Raum",
+ "name": "Stockwerk",
  "owner": "Administrator",
  "permissions": [
   {
@@ -38,18 +30,6 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Administrator",
    "share": 1,
    "write": 1
   }

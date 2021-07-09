@@ -5,6 +5,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "title",
   "address_section",
   "street",
   "street_nr",
@@ -53,9 +54,15 @@
    "fieldname": "street_nr",
    "fieldtype": "Data",
    "label": "Hausnummer"
+  },
+  {
+   "description": "Bsp. Mattenhofstrasse 5, Tiefgarage",
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Titel"
   }
  ],
- "modified": "2021-07-08 13:58:39.526437",
+ "modified": "2021-07-09 10:29:43.118761",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Gesamtobjekt",

@@ -9,10 +9,6 @@ def get_data():
                 'items': ['Mietvertrag']
             },
             {
-                'label': _("Raum"),
-                'items': ['Raum']
-            },
-            {
                 'label': _("Schluessel"),
                 'items': ['Schluessel']
             }

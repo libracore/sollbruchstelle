@@ -1,5 +1,5 @@
 {
- "autoname": "field:title",
+ "autoname": "naming_series",
  "creation": "2021-07-01 10:24:54.020989",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -25,7 +25,9 @@
   "tc_name",
   "terms",
   "termination_section",
-  "termination_date"
+  "termination_date",
+  "interest_rate_release",
+  "amended_from"
  ],
  "fields": [
   {
@@ -38,8 +40,7 @@
    "fieldname": "customer",
    "fieldtype": "Link",
    "label": "Customer",
-   "options": "Customer",
-   "read_only": 1
+   "options": "Customer"
   },
   {
    "fieldname": "tenant_type",
@@ -103,12 +104,12 @@
    "collapsible": 1,
    "fieldname": "termination_section",
    "fieldtype": "Section Break",
-   "label": "Kuendigung"
+   "label": "K\u00fcndigung"
   },
   {
    "fieldname": "termination_date",
    "fieldtype": "Date",
-   "label": "Kuendigungsdatum"
+   "label": "Kuendigungstermin"
   },
   {
    "fieldname": "object_section",
@@ -141,15 +142,31 @@
    "fieldname": "terms",
    "fieldtype": "Text Editor",
    "label": "Gesch\u00e4ftsbed. Details"
+  },
+  {
+   "fieldname": "interest_rate_release",
+   "fieldtype": "Date",
+   "label": "Mietzinshaftentlassung"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Mietvertrag",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
- "modified": "2021-07-08 16:02:34.102392",
+ "is_submittable": 1,
+ "modified": "2021-07-09 12:21:27.312214",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",
  "owner": "Administrator",
  "permissions": [
   {
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -159,6 +176,7 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],

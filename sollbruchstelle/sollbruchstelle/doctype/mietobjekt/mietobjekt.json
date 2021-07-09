@@ -8,10 +8,12 @@
  "field_order": [
   "title_section",
   "object_name",
+  "column_break_1",
   "total_object",
   "street_nr",
-  "column_break_4",
   "reference_nr",
+  "column_break_4",
+  "data_8",
   "adresse_section",
   "column_break_28",
   "details",
@@ -181,13 +183,12 @@
   },
   {
    "fieldname": "title_section",
-   "fieldtype": "Section Break",
-   "label": "Title"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "object_name",
    "fieldtype": "Data",
-   "label": "Name Mietobjekt",
+   "label": "Raum/Mietobjekt",
    "unique": 1
   },
   {
@@ -215,8 +216,9 @@
   },
   {
    "fieldname": "floor",
-   "fieldtype": "Data",
-   "label": "Stockwerk"
+   "fieldtype": "Link",
+   "label": "Stockwerk",
+   "options": "Stockwerk"
   },
   {
    "fieldname": "floor_surcharge",
@@ -264,9 +266,17 @@
    "fieldtype": "Table",
    "label": "Schl\u00fcsselvergabe",
    "options": "Schluesselvergabe"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "data_8",
+   "fieldtype": "Data"
   }
  ],
- "modified": "2021-07-08 13:52:24.367239",
+ "modified": "2021-07-09 08:05:55.116702",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietobjekt",

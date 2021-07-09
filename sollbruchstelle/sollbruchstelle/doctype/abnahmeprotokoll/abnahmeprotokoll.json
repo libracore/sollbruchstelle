@@ -1,0 +1,124 @@
+{
+ "autoname": "format:{reference_nr}-{tenant}",
+ "creation": "2021-07-09 10:45:26.151606",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "total_object",
+  "object_name",
+  "reference_nr",
+  "tenant",
+  "walls",
+  "ceiling",
+  "floor",
+  "light",
+  "socket",
+  "missing_keys",
+  "other",
+  "content",
+  "ort_datum"
+ ],
+ "fields": [
+  {
+   "fieldname": "total_object",
+   "fieldtype": "Link",
+   "label": "Gesamtobjekt",
+   "options": "Gesamtobjekt"
+  },
+  {
+   "fetch_from": "object_name.reference_nr",
+   "fetch_if_empty": 1,
+   "fieldname": "reference_nr",
+   "fieldtype": "Data",
+   "label": "Referenz-Nr."
+  },
+  {
+   "fetch_from": "mietvertrag",
+   "fieldname": "tenant",
+   "fieldtype": "Data",
+   "label": "Mieter*In"
+  },
+  {
+   "default": "0",
+   "fieldname": "walls",
+   "fieldtype": "Check",
+   "label": "W\u00e4nde"
+  },
+  {
+   "default": "0",
+   "fieldname": "ceiling",
+   "fieldtype": "Check",
+   "label": "Decke"
+  },
+  {
+   "default": "0",
+   "fieldname": "floor",
+   "fieldtype": "Check",
+   "label": "Boden"
+  },
+  {
+   "default": "0",
+   "fieldname": "light",
+   "fieldtype": "Check",
+   "label": "Licht"
+  },
+  {
+   "default": "0",
+   "fieldname": "socket",
+   "fieldtype": "Check",
+   "label": "Steckdose"
+  },
+  {
+   "default": "0",
+   "fieldname": "missing_keys",
+   "fieldtype": "Check",
+   "label": "fehlende Schl\u00fcssel"
+  },
+  {
+   "default": "0",
+   "fieldname": "other",
+   "fieldtype": "Check",
+   "label": "sonstiges"
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Text Editor",
+   "label": "Inhalt"
+  },
+  {
+   "fieldname": "ort_datum",
+   "fieldtype": "Data",
+   "label": "Ort, Datum"
+  },
+  {
+   "fieldname": "object_name",
+   "fieldtype": "Link",
+   "label": "Mietobjekt",
+   "options": "Mietobjekt"
+  }
+ ],
+ "modified": "2021-07-09 10:50:44.008566",
+ "modified_by": "Administrator",
+ "module": "Sollbruchstelle",
+ "name": "Abnahmeprotokoll",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
