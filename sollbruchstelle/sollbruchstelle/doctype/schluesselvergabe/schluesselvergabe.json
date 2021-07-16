@@ -1,0 +1,37 @@
+{
+ "creation": "2021-07-08 13:51:02.336114",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "schluessel",
+  "customer"
+ ],
+ "fields": [
+  {
+   "fieldname": "schluessel",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Schl\u00fcssel",
+   "options": "Schluessel"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Kunde",
+   "options": "Customer"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-07-09 07:57:03.162512",
+ "modified_by": "nicole.gret@libracore.com",
+ "module": "Sollbruchstelle",
+ "name": "Schluesselvergabe",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

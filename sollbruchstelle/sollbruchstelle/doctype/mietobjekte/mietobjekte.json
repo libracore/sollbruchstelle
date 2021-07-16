@@ -1,0 +1,75 @@
+{
+ "creation": "2021-07-02 16:24:45.235231",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "object_name",
+  "mailbox",
+  "doorlabel",
+  "outside_label",
+  "room_cleaning",
+  "internet"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "object_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Mietobjekt",
+   "options": "Mietobjekt"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "mailbox",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Briefkasten"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "doorlabel",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "T\u00fcrbeschriftung"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "outside_label",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Aussenbeschriftung"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "room_cleaning",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Raumreinigung"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "internet",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Internet"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-07-02 16:41:35.273060",
+ "modified_by": "Administrator",
+ "module": "Sollbruchstelle",
+ "name": "Mietobjekte",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

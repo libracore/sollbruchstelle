@@ -1,0 +1,302 @@
+{
+ "allow_rename": 1,
+ "autoname": "format:{object_name} - {total_object}",
+ "creation": "2021-06-28 13:24:38.487489",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title_section",
+  "object_name",
+  "column_break_1",
+  "total_object",
+  "street_nr",
+  "reference_nr",
+  "column_break_4",
+  "data_8",
+  "adresse_section",
+  "column_break_28",
+  "details",
+  "floor",
+  "floor_surcharge",
+  "size",
+  "height",
+  "price",
+  "bodenbelag",
+  "usage_type",
+  "public",
+  "people",
+  "time_of_use",
+  "notes",
+  "column_break_12",
+  "rentable",
+  "balcony",
+  "electricity",
+  "sink",
+  "closet",
+  "sun",
+  "rented",
+  "wheelchair_accessible",
+  "internet",
+  "parking_outdoor",
+  "parking_indoor",
+  "acces_public_transport",
+  "elevator_people",
+  "elevator_goods",
+  "rejected_prospects_section",
+  "rejected_prospects",
+  "schluessel_section",
+  "schluesselvergabe"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "rentable",
+   "fieldtype": "Check",
+   "label": "Vermietbar"
+  },
+  {
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "label": "Gr\u00f6sse [m2]"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Raum H\u00f6he [m]"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Preis CHF / Monat"
+  },
+  {
+   "default": "0",
+   "fieldname": "sun",
+   "fieldtype": "Check",
+   "label": "Sonnenseite"
+  },
+  {
+   "default": "0",
+   "fieldname": "sink",
+   "fieldtype": "Check",
+   "label": "Lavabo"
+  },
+  {
+   "default": "0",
+   "fieldname": "closet",
+   "fieldtype": "Check",
+   "label": "Einbauschr\u00e4nke"
+  },
+  {
+   "fieldname": "people",
+   "fieldtype": "Data",
+   "label": "Anzahl Personen"
+  },
+  {
+   "default": "0",
+   "fieldname": "balcony",
+   "fieldtype": "Check",
+   "label": "Balkon"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "electricity",
+   "fieldtype": "Check",
+   "label": "Strom"
+  },
+  {
+   "default": "0",
+   "fieldname": "rented",
+   "fieldtype": "Check",
+   "label": "Vermietet"
+  },
+  {
+   "fieldname": "public",
+   "fieldtype": "Data",
+   "label": "\u00d6ffentlich zug\u00e4nglich"
+  },
+  {
+   "default": "0",
+   "fieldname": "wheelchair_accessible",
+   "fieldtype": "Check",
+   "label": "Rollstuhlg\u00e4ngig"
+  },
+  {
+   "default": "0",
+   "fieldname": "internet",
+   "fieldtype": "Check",
+   "label": "Internet"
+  },
+  {
+   "default": "0",
+   "fieldname": "parking_outdoor",
+   "fieldtype": "Check",
+   "label": "Parkpl\u00e4tze aussen"
+  },
+  {
+   "default": "0",
+   "fieldname": "parking_indoor",
+   "fieldtype": "Check",
+   "label": "Garageneinstellpl\u00e4tze"
+  },
+  {
+   "default": "0",
+   "fieldname": "acces_public_transport",
+   "fieldtype": "Check",
+   "label": "Anschluss an \u00f6ffentliche Verkehrsmittel"
+  },
+  {
+   "fieldname": "time_of_use",
+   "fieldtype": "Data",
+   "label": "Zeit der Zwischennutzung (Tage)"
+  },
+  {
+   "default": "0",
+   "fieldname": "elevator_people",
+   "fieldtype": "Check",
+   "label": "Personenlift"
+  },
+  {
+   "default": "0",
+   "fieldname": "elevator_goods",
+   "fieldtype": "Check",
+   "label": "Warenlift"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Bemerkungen"
+  },
+  {
+   "fieldname": "adresse_section",
+   "fieldtype": "Section Break",
+   "label": "Adresse"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "title_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "object_name",
+   "fieldtype": "Data",
+   "label": "Raum/Mietobjekt",
+   "unique": 1
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "bodenbelag",
+   "fieldtype": "Link",
+   "label": "Bodenbelag",
+   "options": "Bodenbelag"
+  },
+  {
+   "fieldname": "usage_type",
+   "fieldtype": "Link",
+   "label": "Nutzungsart",
+   "options": "Nutzungsart"
+  },
+  {
+   "fieldname": "total_object",
+   "fieldtype": "Link",
+   "label": "Gesamtobjekt",
+   "options": "Gesamtobjekt"
+  },
+  {
+   "fieldname": "floor",
+   "fieldtype": "Link",
+   "label": "Stockwerk",
+   "options": "Stockwerk"
+  },
+  {
+   "fieldname": "floor_surcharge",
+   "fieldtype": "Percent",
+   "label": "Stockwerkszuschlag [%]"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reference_nr",
+   "fieldtype": "Data",
+   "label": "Referenznummer",
+   "read_only": 1
+  },
+  {
+   "description": "immer 2-stellig, bsp 5: 05",
+   "fetch_from": "total_object.street_nr",
+   "fieldname": "street_nr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Hausnummer",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "rejected_prospects_section",
+   "fieldtype": "Section Break",
+   "label": "Abgelehnte Interessenten"
+  },
+  {
+   "fieldname": "rejected_prospects",
+   "fieldtype": "Table",
+   "label": "Abgelehnte Interessenten",
+   "options": "Abgelehnte Interessenten"
+  },
+  {
+   "fieldname": "schluessel_section",
+   "fieldtype": "Section Break",
+   "label": "Schl\u00fcssel"
+  },
+  {
+   "fieldname": "schluesselvergabe",
+   "fieldtype": "Table",
+   "label": "Schl\u00fcsselvergabe",
+   "options": "Schluesselvergabe"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "data_8",
+   "fieldtype": "Data"
+  }
+ ],
+ "modified": "2021-07-09 08:05:55.116702",
+ "modified_by": "Administrator",
+ "module": "Sollbruchstelle",
+ "name": "Mietobjekt",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
