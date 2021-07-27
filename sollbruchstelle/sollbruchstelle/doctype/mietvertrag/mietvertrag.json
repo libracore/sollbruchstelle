@@ -6,9 +6,11 @@
  "engine": "InnoDB",
  "field_order": [
   "agreement_type",
+  "contact",
   "column_break_3",
   "total_object",
   "customer",
+  "contact_2",
   "object_section",
   "mietobjekte",
   "section_break_2",
@@ -156,11 +158,23 @@
    "options": "Mietvertrag",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Mieter 1 (Haupt)",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "contact_2",
+   "fieldtype": "Link",
+   "label": "Mieter 2 (Solidar)",
+   "options": "Contact"
   }
  ],
  "is_submittable": 1,
- "modified": "2021-07-09 12:21:27.312214",
- "modified_by": "Administrator",
+ "modified": "2021-07-27 09:39:24.783368",
+ "modified_by": "nicole.gret@libracore.com",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",
  "owner": "Administrator",
