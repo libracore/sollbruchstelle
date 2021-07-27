@@ -1,11 +1,12 @@
 {
- "autoname": "naming_series",
+ "autoname": "naming_series:",
  "creation": "2021-07-01 10:24:54.020989",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "agreement_type",
+  "naming_series",
   "contact",
   "column_break_3",
   "total_object",
@@ -170,11 +171,18 @@
    "fieldtype": "Link",
    "label": "Mieter 2 (Solidar)",
    "options": "Contact"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "MV-.",
+   "set_only_once": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2021-07-27 09:39:24.783368",
- "modified_by": "nicole.gret@libracore.com",
+ "modified": "2021-07-27 10:31:06.764808",
+ "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",
  "owner": "Administrator",
