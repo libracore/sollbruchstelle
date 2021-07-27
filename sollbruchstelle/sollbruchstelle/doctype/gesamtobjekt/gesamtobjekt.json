@@ -13,7 +13,9 @@
   "city",
   "to_date",
   "column_break_7",
-  "notes"
+  "notes",
+  "supplier_section",
+  "table_supplier"
  ],
  "fields": [
   {
@@ -60,9 +62,20 @@
    "fieldname": "title",
    "fieldtype": "Data",
    "label": "Titel"
+  },
+  {
+   "fieldname": "supplier_section",
+   "fieldtype": "Section Break",
+   "label": "Lieferanten"
+  },
+  {
+   "fieldname": "table_supplier",
+   "fieldtype": "Table",
+   "label": "Lieferanten dieses Objekts",
+   "options": "Lieferant Gesamtobjekt"
   }
  ],
- "modified": "2021-07-09 10:29:43.118761",
+ "modified": "2021-07-27 10:20:54.648574",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Gesamtobjekt",

@@ -1,14 +1,17 @@
 {
- "autoname": "naming_series",
+ "autoname": "naming_series:",
  "creation": "2021-07-01 10:24:54.020989",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "agreement_type",
+  "naming_series",
+  "contact",
   "column_break_3",
   "total_object",
   "customer",
+  "contact_2",
   "object_section",
   "mietobjekte",
   "section_break_2",
@@ -156,10 +159,29 @@
    "options": "Mietvertrag",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Mieter 1 (Haupt)",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "contact_2",
+   "fieldtype": "Link",
+   "label": "Mieter 2 (Solidar)",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "MV-.",
+   "set_only_once": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2021-07-09 12:21:27.312214",
+ "modified": "2021-07-27 10:31:06.764808",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",
