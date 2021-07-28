@@ -5,6 +5,7 @@
  "engine": "InnoDB",
  "field_order": [
   "object_name",
+  "rate",
   "mailbox",
   "doorlabel",
   "outside_label",
@@ -59,10 +60,16 @@
    "fieldtype": "Check",
    "in_list_view": 1,
    "label": "Internet"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Miete/M."
   }
  ],
  "istable": 1,
- "modified": "2021-07-02 16:41:35.273060",
+ "modified": "2021-07-28 10:48:13.680400",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietobjekte",

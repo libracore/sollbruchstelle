@@ -24,7 +24,6 @@
   "price",
   "bodenbelag",
   "usage_type",
-  "public",
   "people",
   "time_of_use",
   "notes",
@@ -40,6 +39,7 @@
   "internet",
   "parking_outdoor",
   "parking_indoor",
+  "accessability",
   "acces_public_transport",
   "elevator_people",
   "elevator_goods",
@@ -114,11 +114,6 @@
    "fieldname": "rented",
    "fieldtype": "Check",
    "label": "Vermietet"
-  },
-  {
-   "fieldname": "public",
-   "fieldtype": "Data",
-   "label": "\u00d6ffentlich zug\u00e4nglich"
   },
   {
    "default": "0",
@@ -274,9 +269,15 @@
   {
    "fieldname": "data_8",
    "fieldtype": "Data"
+  },
+  {
+   "default": "0",
+   "fieldname": "accessability",
+   "fieldtype": "Check",
+   "label": "\u00d6ffentlich Zug\u00e4nglich"
   }
  ],
- "modified": "2021-07-09 08:05:55.116702",
+ "modified": "2021-07-28 10:50:57.252878",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietobjekt",
