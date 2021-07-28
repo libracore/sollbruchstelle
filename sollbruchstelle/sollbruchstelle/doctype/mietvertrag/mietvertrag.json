@@ -92,7 +92,7 @@
    "fieldtype": "Section Break"
   },
   {
-   "fetch_from": "object_name.total_object",
+   "fetch_from": "mietobjekt.total_object",
    "fieldname": "total_object",
    "fieldtype": "Link",
    "label": "Gesamtobjekt",
@@ -143,6 +143,7 @@
    "options": "Terms"
   },
   {
+   "fetch_if_empty": 1,
    "fieldname": "terms",
    "fieldtype": "Text Editor",
    "label": "Gesch\u00e4ftsbed. Details"
@@ -184,7 +185,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2021-07-27 11:32:10.777381",
+ "modified": "2021-07-28 15:20:02.541899",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",

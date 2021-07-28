@@ -6,6 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "titel",
+  "type",
   "terms"
  ],
  "fields": [
@@ -19,9 +20,15 @@
    "fieldname": "terms",
    "fieldtype": "Text Editor",
    "label": "Terms and Conditions"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Mietvertrag\nKuendigung"
   }
  ],
- "modified": "2021-07-08 15:58:50.512144",
+ "modified": "2021-07-28 14:55:07.097570",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Terms",
