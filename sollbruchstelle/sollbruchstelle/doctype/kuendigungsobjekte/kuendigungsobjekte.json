@@ -1,0 +1,30 @@
+{
+ "creation": "2021-07-28 11:50:12.461830",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "k_object"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "k_object",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "K\u00fcndigungsobjekt",
+   "options": "Mietobjekt"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-07-28 13:33:38.426389",
+ "modified_by": "Administrator",
+ "module": "Sollbruchstelle",
+ "name": "Kuendigungsobjekte",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
