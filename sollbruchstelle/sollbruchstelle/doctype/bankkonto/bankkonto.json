@@ -1,0 +1,59 @@
+{
+ "autoname": "field:bank",
+ "creation": "2021-07-30 13:55:46.584316",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "bank",
+  "bic",
+  "iban",
+  "account_owner"
+ ],
+ "fields": [
+  {
+   "fieldname": "bank",
+   "fieldtype": "Data",
+   "label": "Bank",
+   "unique": 1
+  },
+  {
+   "fieldname": "bic",
+   "fieldtype": "Data",
+   "label": "BIC/SWIFT"
+  },
+  {
+   "fieldname": "iban",
+   "fieldtype": "Data",
+   "label": "IBAN"
+  },
+  {
+   "fieldname": "account_owner",
+   "fieldtype": "Data",
+   "label": "Kontoinhaberin"
+  }
+ ],
+ "modified": "2021-07-30 14:00:15.949521",
+ "modified_by": "Administrator",
+ "module": "Sollbruchstelle",
+ "name": "Bankkonto",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

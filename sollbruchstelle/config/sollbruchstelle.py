@@ -30,6 +30,12 @@ def get_data():
                        "name": "Payment Entry",
                        "label": _("Kundenzahlung"),
                        "description": _("Payment Entry")
+                   },
+                   {
+                       "type": "doctype",
+                       "name": "Payment Reminder",
+                       "label": _("Zahlungserinnerung"),
+                       "description": _("Payment Reminder")
                    }
             ]
         },
