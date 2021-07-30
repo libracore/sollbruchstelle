@@ -5,12 +5,11 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "agreement_type",
   "naming_series",
-  "contact",
-  "column_break_3",
   "total_object",
   "customer",
+  "column_break_3",
+  "contact",
   "contact_2",
   "object_section",
   "mietobjekte",
@@ -27,9 +26,6 @@
   "terms_section",
   "tc_name",
   "terms",
-  "termination_section",
-  "termination_date",
-  "interest_rate_release",
   "amended_from"
  ],
  "fields": [
@@ -82,12 +78,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "agreement_type",
-   "fieldtype": "Select",
-   "label": "Vertragstyp",
-   "options": "Mietvertrag\nNachvertrag"
-  },
-  {
    "fieldname": "section_break_2",
    "fieldtype": "Section Break"
   },
@@ -96,24 +86,11 @@
    "fieldname": "total_object",
    "fieldtype": "Link",
    "label": "Gesamtobjekt",
-   "options": "Gesamtobjekt",
-   "read_only": 1
+   "options": "Gesamtobjekt"
   },
   {
    "fieldname": "column_break_3",
    "fieldtype": "Column Break"
-  },
-  {
-   "collapsible": 1,
-   "fieldname": "termination_section",
-   "fieldtype": "Section Break",
-   "label": "K\u00fcndigung"
-  },
-  {
-   "allow_on_submit": 1,
-   "fieldname": "termination_date",
-   "fieldtype": "Date",
-   "label": "Kuendigungstermin"
   },
   {
    "fieldname": "object_section",
@@ -143,26 +120,11 @@
    "options": "Terms"
   },
   {
+   "fetch_from": "tc_name.terms",
    "fetch_if_empty": 1,
    "fieldname": "terms",
    "fieldtype": "Text Editor",
    "label": "Gesch\u00e4ftsbed. Details"
-  },
-  {
-   "allow_on_submit": 1,
-   "fieldname": "interest_rate_release",
-   "fieldtype": "Date",
-   "label": "Mietzinshaftentlassung"
-  },
-  {
-   "allow_on_submit": 1,
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Mietvertrag",
-   "print_hide": 1,
-   "read_only": 1
   },
   {
    "fieldname": "contact",
@@ -182,10 +144,19 @@
    "label": "Naming Series",
    "options": "MV-.",
    "set_only_once": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Mietvertrag",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2021-07-28 15:20:02.541899",
+ "modified": "2021-07-30 10:02:46.949564",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",

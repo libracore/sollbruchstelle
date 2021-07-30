@@ -7,6 +7,14 @@ def get_data():
             {
                 'label': _("Kündigung"),
                 'items': ['Kuendigung']
+            },
+            {
+                'label': _("Nachtrag"),
+                'items': ['Nachtrag']
+            },
+            {
+                'label': _("Abnahmeprotokoll"),
+                'items': ['Abnahmeprotokoll']
             }
         ]
     }
