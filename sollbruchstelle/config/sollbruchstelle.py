@@ -1,9 +1,8 @@
 from __future__ import unicode_literals
 from frappe import _
 
-
 def get_data():
-    return[
+    return [
         {
             "label": _("Kundendokumente"),
             "icon": "fa fa-money",
@@ -58,6 +57,18 @@ def get_data():
                    },
                    {
                        "type": "doctype",
+                       "name": "Nachtrag",
+                       "label": _("Nachtrag"),
+                       "description": _("Nachtrag")
+                   },
+                   {
+                       "type": "doctype",
+                       "name": "Kuendigung",
+                       "label": _("Kündigung"),
+                       "description": _("Kuendigung")
+                   },
+                   {
+                       "type": "doctype",
                        "name": "Schluessel",
                        "label": _("Schlüssel"),
                        "description": _("Schlüssel")
@@ -71,7 +82,7 @@ def get_data():
             ]
         },
         {
-            "label": _("Purchasing"),
+            "label": _("Einkauf"),
             "icon": "fa fa-money",
             "items": [
                    {

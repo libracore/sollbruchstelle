@@ -6,8 +6,8 @@ def get_data():
 	return [
 		{
 			"module_name": "Sollbruchstelle",
-			"color": "grey",
-			"icon": "octicon octicon-file-directory",
+			"color": "red",
+			"icon": "fa fa-home",
 			"type": "module",
 			"label": _("Sollbruchstelle")
 		}

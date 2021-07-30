@@ -1,0 +1,233 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2021-07-29 08:05:57.743560",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "mietvertrag",
+  "contact",
+  "column_break_3",
+  "total_object",
+  "customer",
+  "contact_2",
+  "object_section",
+  "mietobjekte",
+  "section_break_2",
+  "title",
+  "contract_start",
+  "contract_end",
+  "depot_amount",
+  "rent_liability",
+  "column_break_7",
+  "status",
+  "tenant_type",
+  "usage_type",
+  "terms_section",
+  "tc_name",
+  "terms",
+  "termination_section",
+  "termination_date",
+  "interest_rate_release",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "NM-.",
+   "set_only_once": 1
+  },
+  {
+   "fetch_from": "mietvertrag.contact",
+   "fetch_if_empty": 1,
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Mieter 1 (Haupt)",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "mietobjekt.total_object",
+   "fieldname": "total_object",
+   "fieldtype": "Link",
+   "label": "Gesamtobjekt",
+   "options": "Gesamtobjekt",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "mietvertrag.customer",
+   "fetch_if_empty": 1,
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "mietvertrag.contact_2",
+   "fetch_if_empty": 1,
+   "fieldname": "contact_2",
+   "fieldtype": "Link",
+   "label": "Mieter 2 (Solidar)",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "object_section",
+   "fieldtype": "Section Break",
+   "label": "Mietobjekte"
+  },
+  {
+   "fieldname": "mietobjekte",
+   "fieldtype": "Table",
+   "label": "Mietobjekte",
+   "options": "Mietobjekte"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "mietvertrag.title",
+   "fetch_if_empty": 1,
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Titel",
+   "unique": 1
+  },
+  {
+   "fetch_from": "mietvertrag.contract_start",
+   "fetch_if_empty": 1,
+   "fieldname": "contract_start",
+   "fieldtype": "Date",
+   "label": "Mietbeginn"
+  },
+  {
+   "fetch_from": "mietvertrag.contract_end",
+   "fetch_if_empty": 1,
+   "fieldname": "contract_end",
+   "fieldtype": "Date",
+   "label": "Mietende"
+  },
+  {
+   "fetch_from": "mietvertrag.depot_amount",
+   "fetch_if_empty": 1,
+   "fieldname": "depot_amount",
+   "fieldtype": "Currency",
+   "label": "Depoth\u00f6he"
+  },
+  {
+   "fetch_from": "mietvertrag.rent_liability",
+   "fetch_if_empty": 1,
+   "fieldname": "rent_liability",
+   "fieldtype": "Date",
+   "label": "Mietzinshaftung"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Aktiv\nGek\u00fcndigt"
+  },
+  {
+   "fieldname": "tenant_type",
+   "fieldtype": "Select",
+   "label": "Mieterart",
+   "options": "Hauptmieter*Innen\nUntermieter*Innen"
+  },
+  {
+   "fetch_from": "mietvertrag.usage_type",
+   "fetch_if_empty": 1,
+   "fieldname": "usage_type",
+   "fieldtype": "Link",
+   "label": "Nutzungsart",
+   "options": "Nutzungsart"
+  },
+  {
+   "fieldname": "terms_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "mietvertrag.tc_name",
+   "fetch_if_empty": 1,
+   "fieldname": "tc_name",
+   "fieldtype": "Link",
+   "label": "Gesch\u00e4ftsbedingung Vorlagen",
+   "options": "Terms"
+  },
+  {
+   "fetch_from": "tc_name.terms",
+   "fetch_if_empty": 1,
+   "fieldname": "terms",
+   "fieldtype": "Text Editor",
+   "label": "Gesch\u00e4ftsbed. Details"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "termination_section",
+   "fieldtype": "Section Break",
+   "label": "K\u00fcndigung"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "termination_date",
+   "fieldtype": "Date",
+   "label": "Kuendigungstermin"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "interest_rate_release",
+   "fieldtype": "Date",
+   "label": "Mietzinshaftentlassung"
+  },
+  {
+   "fieldname": "mietvertrag",
+   "fieldtype": "Link",
+   "label": "Mietvertrag",
+   "options": "Mietvertrag"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Nachtrag",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-07-29 08:37:13.488722",
+ "modified_by": "Administrator",
+ "module": "Sollbruchstelle",
+ "name": "Nachtrag",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

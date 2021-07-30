@@ -7,10 +7,6 @@ def get_data():
             {
                 'label': _("Mietobjekt"),
                 'items': ['Mietobjekt']
-            },
-            {
-                'label': _("Mietvertrag"),
-                'items': ['Mietvertrag']
             }
         ]
     }
