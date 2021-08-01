@@ -104,7 +104,7 @@ app_license = "AGPL"
 # 		"sollbruchstelle.tasks.weekly"
 # 	]
 # 	"monthly": [
-# 		"sollbruchstelle.tasks.monthly"
+# 		"sollbruchstelle.sollbruchstelle.doctype.rechnungslauf.rechnungslauf.generate_invoices"
 # 	]
 # }
 

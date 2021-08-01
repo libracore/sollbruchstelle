@@ -2,7 +2,9 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Abnahmeprotokoll', {
-	// refresh: function(frm) {
+	onload: function(frm) {
 
-	// }
+		frm.page.add_menu_item(__("Custom BTN"), function() {
+					console.log("Custom BTN Yeah!!!")
+		 });
 });
