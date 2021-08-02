@@ -6,15 +6,20 @@
  "engine": "InnoDB",
  "field_order": [
   "title",
+  "column_break_2",
+  "project_name",
   "address_section",
   "street",
   "street_nr",
   "zip_code",
   "city",
   "to_date",
-  "bank",
-  "column_break_7",
+  "column_break_10",
   "notes",
+  "payment_details",
+  "bank",
+  "check_fee",
+  "setup_fee",
   "supplier_section",
   "table_supplier"
  ],
@@ -27,26 +32,25 @@
   {
    "fieldname": "street",
    "fieldtype": "Data",
-   "label": "Strasse"
+   "label": "Strasse",
+   "reqd": 1
   },
   {
    "fieldname": "zip_code",
    "fieldtype": "Data",
-   "label": "PLZ"
+   "label": "PLZ",
+   "reqd": 1
   },
   {
    "fieldname": "city",
    "fieldtype": "Data",
-   "label": "Ort"
+   "label": "Ort",
+   "reqd": 1
   },
   {
    "fieldname": "to_date",
    "fieldtype": "Date",
    "label": "Bis"
-  },
-  {
-   "fieldname": "column_break_7",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "notes",
@@ -82,9 +86,40 @@
    "label": "Bankkonto",
    "options": "Bankkonto",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Link",
+   "label": "Projekt",
+   "options": "Projektname",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_details",
+   "fieldtype": "Section Break",
+   "label": "Zahlungsdetails"
+  },
+  {
+   "default": "0",
+   "fieldname": "check_fee",
+   "fieldtype": "Check",
+   "label": "Geb\u00fchren"
+  },
+  {
+   "fieldname": "setup_fee",
+   "fieldtype": "Currency",
+   "label": "Aufschaltgeb\u00fchren"
   }
  ],
- "modified": "2021-07-30 15:25:47.801673",
+ "modified": "2021-08-02 15:57:30.401013",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Gesamtobjekt",
