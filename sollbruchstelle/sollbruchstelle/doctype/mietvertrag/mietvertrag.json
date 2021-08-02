@@ -8,7 +8,7 @@
   "naming_series",
   "total_object",
   "customer",
-  "column_break_3",
+  "column_break_4",
   "contact",
   "contact_2",
   "object_section",
@@ -89,10 +89,6 @@
    "options": "Gesamtobjekt"
   },
   {
-   "fieldname": "column_break_3",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "object_section",
    "fieldtype": "Section Break",
    "label": "Mietobjekte"
@@ -153,10 +149,14 @@
    "options": "Mietvertrag",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
   }
  ],
  "is_submittable": 1,
- "modified": "2021-07-30 10:02:46.949564",
+ "modified": "2021-08-02 15:58:48.281607",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",
