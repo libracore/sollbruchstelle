@@ -1,0 +1,44 @@
+{
+ "creation": "2021-08-04 10:25:52.184723",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "key_amount",
+  "key_batch",
+  "place"
+ ],
+ "fields": [
+  {
+   "fieldname": "key_amount",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Anz. Schl\u00fcssel/Batch"
+  },
+  {
+   "fieldname": "key_batch",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Art",
+   "options": "Schl\u00fcssel\nBatch"
+  },
+  {
+   "fieldname": "place",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Nutzungsort",
+   "options": "Hauptzugang\nMietobjekt\nGarage"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-08-04 10:27:27.709747",
+ "modified_by": "Administrator",
+ "module": "Sollbruchstelle",
+ "name": "Inclkey",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
