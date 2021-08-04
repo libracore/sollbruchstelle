@@ -19,6 +19,7 @@
   "details",
   "floor",
   "floor_surcharge",
+  "sun_surcharge",
   "size",
   "height",
   "price",
@@ -44,9 +45,7 @@
   "elevator_people",
   "elevator_goods",
   "rejected_prospects_section",
-  "rejected_prospects",
-  "schluessel_section",
-  "schluesselvergabe"
+  "rejected_prospects"
  ],
  "fields": [
   {
@@ -252,17 +251,6 @@
    "options": "Abgelehnte Interessenten"
   },
   {
-   "fieldname": "schluessel_section",
-   "fieldtype": "Section Break",
-   "label": "Schl\u00fcssel"
-  },
-  {
-   "fieldname": "schluesselvergabe",
-   "fieldtype": "Table",
-   "label": "Schl\u00fcsselvergabe",
-   "options": "Schluesselvergabe"
-  },
-  {
    "fieldname": "column_break_1",
    "fieldtype": "Column Break"
   },
@@ -275,9 +263,14 @@
    "fieldname": "accessability",
    "fieldtype": "Check",
    "label": "\u00d6ffentlich Zug\u00e4nglich"
+  },
+  {
+   "fieldname": "sun_surcharge",
+   "fieldtype": "Percent",
+   "label": "Sonnenseitezuschlag [%]"
   }
  ],
- "modified": "2021-07-28 10:50:57.252878",
+ "modified": "2021-08-04 11:34:11.443629",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietobjekt",

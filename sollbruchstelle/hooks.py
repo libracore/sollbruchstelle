@@ -95,7 +95,7 @@ app_license = "AGPL"
 # 		"sollbruchstelle.tasks.all"
 # 	],
 # 	"daily": [
-# 		"sollbruchstelle.tasks.daily"
+#	"sollbruchstelle.utils.submit_payment_reminder"
 # 	],
 # 	"hourly": [
 # 		"sollbruchstelle.tasks.hourly"
@@ -104,7 +104,7 @@ app_license = "AGPL"
 # 		"sollbruchstelle.tasks.weekly"
 # 	]
 # 	"monthly": [
-# 		"sollbruchstelle.tasks.monthly"
+# 		"sollbruchstelle.tasks.weekly"
 # 	]
 # }
 
