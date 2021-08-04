@@ -5,63 +5,83 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "object_name",
-  "key_type",
-  "key_nr"
+  "total_object",
+  "schliessanlage",
+  "key_nr",
+  "key_rate",
+  "cash",
+  "esr",
+  "handout_date",
+  "return_date",
+  "notes"
  ],
  "fields": [
   {
-   "fieldname": "key_type",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Schl\u00fcsselart",
-   "options": "Badge\nSchl\u00fcssel"
-  },
-  {
    "fieldname": "key_nr",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Schl\u00fcssel-Nr.",
+   "label": "Schl\u00fcssel/B-Nr.",
+   "options": "Schluessel_Batchnr",
    "unique": 1
   },
   {
-   "fieldname": "object_name",
+   "fieldname": "total_object",
    "fieldtype": "Link",
-   "label": "Mietobjekt",
-   "options": "Mietobjekt"
+   "in_list_view": 1,
+   "label": "Gesamtobjekt",
+   "options": "Gesamtobjekt"
+  },
+  {
+   "fieldname": "schliessanlage",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Schliessanlage",
+   "options": "Schliessanlage"
+  },
+  {
+   "fieldname": "key_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Preis"
+  },
+  {
+   "default": "0",
+   "fieldname": "cash",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Bar"
+  },
+  {
+   "default": "0",
+   "fieldname": "esr",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "ESR"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notiz"
+  },
+  {
+   "fieldname": "return_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "R\u00fcckgabe"
+  },
+  {
+   "fieldname": "handout_date",
+   "fieldtype": "Date",
+   "label": "Abgabe"
   }
  ],
- "modified": "2021-07-09 08:07:24.662101",
+ "istable": 1,
+ "modified": "2021-08-04 11:01:49.588089",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Schluessel",
  "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Administrator",
-   "share": 1,
-   "write": 1
-  }
- ],
+ "permissions": [],
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",

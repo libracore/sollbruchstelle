@@ -21,7 +21,9 @@
   "check_fee",
   "setup_fee",
   "supplier_section",
-  "table_supplier"
+  "table_supplier",
+  "schluessel_section",
+  "inclkey"
  ],
  "fields": [
   {
@@ -117,9 +119,20 @@
    "fieldname": "setup_fee",
    "fieldtype": "Currency",
    "label": "Aufschaltgeb\u00fchren"
+  },
+  {
+   "fieldname": "schluessel_section",
+   "fieldtype": "Section Break",
+   "label": "Schl\u00fcssel"
+  },
+  {
+   "fieldname": "inclkey",
+   "fieldtype": "Table",
+   "label": "Inklusiv Schl\u00fcssel",
+   "options": "Inclkey"
   }
  ],
- "modified": "2021-08-02 15:57:30.401013",
+ "modified": "2021-08-04 10:26:36.418667",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Gesamtobjekt",
