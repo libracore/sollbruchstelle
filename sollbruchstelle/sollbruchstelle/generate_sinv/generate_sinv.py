@@ -1,0 +1,71 @@
+import frappe
+from datetime import date
+from datetime import timedelta
+from datetime import datetime
+
+@frappe.whitelist()
+def generate_sinv(doc):
+
+    mietvertrag = frappe.get_doc('Mietvertrag', doc)
+    ges_object = frappe.get_doc('Gesamtobjekt', mietvertrag.total_object)
+    #miet_object = frappe.get_doc('Mietobjekt', mietvertrag.mietobjekte[0])
+    #frappe.msgprint("object_name")
+    sinv = frappe.new_doc("Sales Invoice")
+    sinv.customer = mietvertrag.customer
+    sinv.due_date = mietvertrag.contract_start - timedelta(days=30)
+    sinv.supplier_group = "All Supplier Groups"
+    sinv.global_id = "32"
+    
+    
+    #provide the 1st date in YYYY,MM,DD format
+    date1 = mietvertrag.contract_start
+    #provide the 1st date in YYYY,MM,DD format
+    date2 = mietvertrag.contract_end
+    date_delta = date1 - date2
+    days1 = 1
+    frappe.msgprint("1")
+    days = date_delta.days / 7
+    
+    #monday1 = (date1 - timedelta(days=date1.weekday()))
+    #monday2 = (date2 - timedelta(days=date2.weekday()))
+
+
+    #getting the result, abs = absolute value
+    #(date1-date2).days gives an integer number of dates
+    #days = abs(date1-date2).days
+    #caculating and printing the weeks, // = floor division operator
+    #days = (monday2 - monday1).days / 7
+    
+    
+    #frappe.msgprint(days)
+    
+    
+    
+    for i in mietvertrag.mietobjekte:
+        row = sinv.append("items", {
+                "item_code": "M000",
+                "item_name": i.object_name, #ges_object.title,
+                "qty": int(days),
+                "rate": 3,
+                #"gross_price": invoice['items'][0]['gross_price'],
+                #"net_price": invoice['items'][0]['net_price'],
+                #"amount": invoice['items'][0]['qty'],
+            })
+ 
+        
+        
+    if mietvertrag.posting_fee:
+        row2= sinv.append("items", {
+            "item_code": "A000",
+            "item_name": "Aufschaltgebühr",
+            "qty": 1,
+            "rate": mietvertrag.posting_fee,
+            #"gross_price": invoice['items'][0]['gross_price'],
+            #"net_price": invoice['items'][0]['net_price'],
+            #"amount": invoice['items'][0]['qty'],
+        })  
+        frappe.msgprint("Aufschaltgebühr ist drin")
+        
+    sinv.save()
+    frappe.msgprint("done")
+    return #supplier.name
