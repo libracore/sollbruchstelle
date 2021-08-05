@@ -1,0 +1,48 @@
+{
+ "autoname": "field:key_nr",
+ "creation": "2021-08-03 17:11:10.295983",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "schliessanlage",
+  "key_nr"
+ ],
+ "fields": [
+  {
+   "fieldname": "schliessanlage",
+   "fieldtype": "Link",
+   "label": "Schliessanlage",
+   "options": "Schliessanlage"
+  },
+  {
+   "fieldname": "key_nr",
+   "fieldtype": "Data",
+   "label": "Schl\u00fcssel/Batch-Nr.",
+   "unique": 1
+  }
+ ],
+ "modified": "2021-08-05 16:23:42.691976",
+ "modified_by": "Administrator",
+ "module": "Sollbruchstelle",
+ "name": "Schluessel_Batchnr",
+ "owner": "nicole.gret@libracore.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
