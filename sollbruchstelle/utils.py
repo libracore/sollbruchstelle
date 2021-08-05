@@ -5,7 +5,7 @@
 from __future__ import unicode_literals
 import frappe
 from frappe import _
-
+'''
 def submit_payment_reminder
 daily, Zahlungserinnerung:
 get all SI where due date (+10 tage) and keine PR dazu
@@ -26,3 +26,4 @@ sql_query = ("""SELECT `name`, `due_date`, `posting_date`, `payment_reminder_lev
                       AND ((`exclude_from_payment_reminder_until` IS NULL) OR (`exclude_from_payment_reminder_until` < CURDATE()));
                     """.format(customer=customer.customer, company=company))
             open_invoices = frappe.db.sql(sql_query, as_dict=True)
+'''

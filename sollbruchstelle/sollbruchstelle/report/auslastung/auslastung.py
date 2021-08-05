@@ -2,16 +2,55 @@
 # For license information, please see license.txt
 
 from __future__ import unicode_literals
-# import frappe
+import frappe
+from frappe import _
 
 def execute(filters=None):
+    filters = frappe._dict(filters or {})
     columns = get_columns()
     data = get_data(filters)
+    
     return columns, data
 
 def get_columns():
     return [
+        {"label": _("Mietvertrag"), "fieldname": "naming_series", "fieldtype": "Data", "width": 100},
+        {"label": _("Gesamtobjekt"), "fieldname": "total_object", "fieldtype": "Link", "options": "Gesamtobjekt", "width": 102},
+        {"label": _("Mietobjekt"), "fieldname": "object_name", "fieldtype": "Link", "options": "Mietobjekt", "width": 120},
+        {"label": _("Mietbeginn"), "fieldname": "contract_start", "fieldtype": "Date", "width": 70},
+        {"label": _("Mietende"), "fieldname": "contract_end", "fieldtype": "Date", "width": 70},
+        {"label": _("Nutzungsart"), "fieldname": "usage_type", "fieldtype": "Link", "options": "Nutzungsart", "width": 100},
+        {"label": _("Firma"), "fieldname": "customer", "fieldtype": "Link", "options": "Customer", "width": 100},
+        {"label": _("Kunde 1"), "fieldname": "contact", "fieldtype": "Link", "options": "Contact", "width": 100},
+        {"label": _("Kunde 2"), "fieldname": "contact_2", "fieldtype": "Link", "options": "Contact", "width": 100},
+        {"label": _("Depothöhe"), "fieldname": "depot_amount", "fieldtype": "Currency", "width": 100}
     ]
 
 def get_data(filters):
+    if not filters.total_object:
+        filters.total_object = "%"
+    if not filters.object_name:
+        filters.object_name = "%"
+
+    sql_query="""
+        SELECT 
+            `tabMietvertrag`.`name` AS `name`,
+            `tabMietvertrag`.`total_object` AS `total_object`,
+            `tabMietobjekte`.`object_name` AS `object_name`,
+            `tabMietvertrag`.`contract_start` AS `contract_start`,
+            `tabMietvertrag`.`contract_end` AS `contract_end`,
+            `tabMietvertrag`.`usage_type` AS `usage_type`,
+            `tabMietvertrag`.`customer` AS `customer`,
+            `tabMietvertrag`.`contact` AS `contact`,
+            `tabMietvertrag`.`contact_2` AS `contact_2`,
+            `tabMietvertrag`.`depot_amount` AS `depot_amount`
+        FROM `tabMietvertrag`
+        LEFT JOIN `tabMietobjekte` ON `tabMietvertrag`.`name` = `tabMietobjekte`.`parent`
+        WHERE `tabMietvertrag`.`docstatus` < 2
+        AND `tabMietvertrag`.`contract_start` <= '{date}'
+        AND `tabMietvertrag`.`contract_end` >= '{date}'
+        """.format(total_object=filters.total_object, object_name=filters.object_name, date=filters.date)
+        
+    data = frappe.db.sql(sql_query, as_dict=1)
+    
     return data
