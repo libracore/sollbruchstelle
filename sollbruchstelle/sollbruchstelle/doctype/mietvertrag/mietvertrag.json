@@ -12,6 +12,7 @@
   "contact",
   "contact_2",
   "object_section",
+  "object_name",
   "mietobjekte",
   "section_break_2",
   "title",
@@ -35,8 +36,7 @@
   {
    "fieldname": "title",
    "fieldtype": "Data",
-   "label": "Titel",
-   "unique": 1
+   "label": "Titel"
   },
   {
    "fieldname": "customer",
@@ -167,17 +167,24 @@
   {
    "fieldname": "schluessel",
    "fieldtype": "Table",
-   "options": "Schluessel"
+   "label": "Schl\u00fcssel Vergabe",
+   "options": "Schluessel Vergabe"
   },
   {
    "fieldname": "notice_period",
    "fieldtype": "Select",
    "label": "K\u00fcndigungsfrist",
    "options": "1 Monat\n2 Monate\n3 Monate\n6 Monate"
+  },
+  {
+   "fieldname": "object_name",
+   "fieldtype": "Link",
+   "label": "1 Mietobjekt",
+   "options": "Mietobjekt"
   }
  ],
  "is_submittable": 1,
- "modified": "2021-08-04 14:31:03.092163",
+ "modified": "2021-08-05 14:33:09.955856",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",

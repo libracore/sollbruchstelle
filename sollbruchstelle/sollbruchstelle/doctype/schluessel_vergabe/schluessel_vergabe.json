@@ -1,6 +1,6 @@
 {
  "autoname": "field:key_nr",
- "creation": "2021-07-01 10:44:14.183772",
+ "creation": "2021-08-05 12:47:34.372204",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -17,14 +17,6 @@
  ],
  "fields": [
   {
-   "fieldname": "key_nr",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Schl\u00fcssel/B-Nr.",
-   "options": "Schluessel_Batchnr",
-   "unique": 1
-  },
-  {
    "fieldname": "total_object",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -37,6 +29,14 @@
    "in_list_view": 1,
    "label": "Schliessanlage",
    "options": "Schliessanlage"
+  },
+  {
+   "fieldname": "key_nr",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Schl\u00fcssel/B-Nr.",
+   "options": "Schluessel_Batchnr",
+   "unique": 1
   },
   {
    "fieldname": "key_rate",
@@ -59,9 +59,9 @@
    "label": "ESR"
   },
   {
-   "fieldname": "notes",
-   "fieldtype": "Small Text",
-   "label": "Notiz"
+   "fieldname": "handout_date",
+   "fieldtype": "Date",
+   "label": "Abgabe"
   },
   {
    "fieldname": "return_date",
@@ -70,16 +70,16 @@
    "label": "R\u00fcckgabe"
   },
   {
-   "fieldname": "handout_date",
-   "fieldtype": "Date",
-   "label": "Abgabe"
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notiz"
   }
  ],
  "istable": 1,
- "modified": "2021-08-04 11:01:49.588089",
+ "modified": "2021-08-05 12:47:34.372204",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
- "name": "Schluessel",
+ "name": "Schluessel Vergabe",
  "owner": "Administrator",
  "permissions": [],
  "quick_entry": 1,

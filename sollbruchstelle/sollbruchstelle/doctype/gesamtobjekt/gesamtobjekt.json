@@ -68,7 +68,8 @@
    "description": "Bsp. Mattenhofstrasse 5, Tiefgarage",
    "fieldname": "title",
    "fieldtype": "Data",
-   "label": "Titel"
+   "label": "Titel",
+   "reqd": 1
   },
   {
    "fieldname": "supplier_section",
@@ -132,7 +133,7 @@
    "options": "Inclkey"
   }
  ],
- "modified": "2021-08-04 10:26:36.418667",
+ "modified": "2021-08-04 16:01:07.167171",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Gesamtobjekt",
