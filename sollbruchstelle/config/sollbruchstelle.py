@@ -84,7 +84,15 @@ def get_data():
                        "name": "Abnahmeprotokoll",
                        "label": _("Abnahmeprotokoll"),
                        "description": _("Abnahmeprotokoll")
-                   }                                        
+                   },
+                   {
+                       "type": "report",
+                       "name": "Auslastung",
+                       "label": _("Auslastung"),
+                       "doctyp": "Mietvertrag",
+                       "description": _("Auslastung"),
+                       "is_query_report": True
+                   }                                  
             ]
         },
         {

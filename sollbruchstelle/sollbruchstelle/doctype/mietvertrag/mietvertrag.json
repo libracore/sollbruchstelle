@@ -8,15 +8,17 @@
   "naming_series",
   "total_object",
   "customer",
-  "column_break_3",
+  "column_break_4",
   "contact",
   "contact_2",
   "object_section",
+  "object_name",
   "mietobjekte",
   "section_break_2",
   "title",
   "contract_start",
   "contract_end",
+  "notice_period",
   "depot_amount",
   "rent_liability",
   "posting_fee",
@@ -27,20 +29,23 @@
   "terms_section",
   "tc_name",
   "terms",
-  "amended_from"
+  "amended_from",
+  "section_break_23",
+  "schluessel"
  ],
  "fields": [
   {
    "fieldname": "title",
    "fieldtype": "Data",
-   "label": "Titel",
-   "unique": 1
+   "label": "Titel"
   },
   {
    "fieldname": "customer",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Customer",
-   "options": "Customer"
+   "options": "Customer",
+   "reqd": 1
   },
   {
    "fieldname": "tenant_type",
@@ -87,11 +92,8 @@
    "fieldname": "total_object",
    "fieldtype": "Link",
    "label": "Gesamtobjekt",
-   "options": "Gesamtobjekt"
-  },
-  {
-   "fieldname": "column_break_3",
-   "fieldtype": "Column Break"
+   "options": "Gesamtobjekt",
+   "reqd": 1
   },
   {
    "fieldname": "object_section",
@@ -163,6 +165,34 @@
  ],
  "is_submittable": 1,
  "modified": "2021-08-04 14:24:12.207474",
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "schluessel",
+   "fieldtype": "Table",
+   "label": "Schl\u00fcssel Vergabe",
+   "options": "Schluessel Vergabe"
+  },
+  {
+   "fieldname": "notice_period",
+   "fieldtype": "Select",
+   "label": "K\u00fcndigungsfrist",
+   "options": "1 Monat\n2 Monate\n3 Monate\n6 Monate"
+  },
+  {
+   "fieldname": "object_name",
+   "fieldtype": "Link",
+   "label": "1 Mietobjekt",
+   "options": "Mietobjekt"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-08-05 14:33:09.955856",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",

@@ -1,0 +1,89 @@
+{
+ "autoname": "field:key_nr",
+ "creation": "2021-08-05 12:47:34.372204",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "total_object",
+  "schliessanlage",
+  "key_nr",
+  "key_rate",
+  "cash",
+  "esr",
+  "handout_date",
+  "return_date",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "total_object",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gesamtobjekt",
+   "options": "Gesamtobjekt"
+  },
+  {
+   "fieldname": "schliessanlage",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Schliessanlage",
+   "options": "Schliessanlage"
+  },
+  {
+   "fieldname": "key_nr",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Schl\u00fcssel/B-Nr.",
+   "options": "Schluessel_Batchnr",
+   "unique": 0
+  },
+  {
+   "fieldname": "key_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Preis"
+  },
+  {
+   "default": "0",
+   "fieldname": "cash",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Bar"
+  },
+  {
+   "default": "0",
+   "fieldname": "esr",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "ESR"
+  },
+  {
+   "fieldname": "handout_date",
+   "fieldtype": "Date",
+   "label": "Abgabe"
+  },
+  {
+   "fieldname": "return_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "R\u00fcckgabe"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notiz"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-08-05 16:24:42.401272",
+ "modified_by": "Administrator",
+ "module": "Sollbruchstelle",
+ "name": "Schluessel Vergabe",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

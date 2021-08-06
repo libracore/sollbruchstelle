@@ -5,11 +5,15 @@
  "engine": "InnoDB",
  "field_order": [
   "object_name",
+  "floor",
+  "reference_nr",
+  "rate",
   "mailbox",
   "doorlabel",
   "outside_label",
   "room_cleaning",
-  "internet"
+  "internet",
+  "data_10"
  ],
  "fields": [
   {
@@ -25,7 +29,6 @@
    "default": "0",
    "fieldname": "mailbox",
    "fieldtype": "Check",
-   "in_list_view": 1,
    "label": "Briefkasten"
   },
   {
@@ -33,7 +36,6 @@
    "default": "0",
    "fieldname": "doorlabel",
    "fieldtype": "Check",
-   "in_list_view": 1,
    "label": "T\u00fcrbeschriftung"
   },
   {
@@ -41,7 +43,6 @@
    "default": "0",
    "fieldname": "outside_label",
    "fieldtype": "Check",
-   "in_list_view": 1,
    "label": "Aussenbeschriftung"
   },
   {
@@ -49,7 +50,6 @@
    "default": "0",
    "fieldname": "room_cleaning",
    "fieldtype": "Check",
-   "in_list_view": 1,
    "label": "Raumreinigung"
   },
   {
@@ -57,13 +57,43 @@
    "default": "0",
    "fieldname": "internet",
    "fieldtype": "Check",
-   "in_list_view": 1,
    "label": "Internet"
+  },
+  {
+   "fetch_from": "object_name.price",
+   "fetch_if_empty": 1,
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Miete/M"
+  },
+  {
+   "fetch_from": "object_name.floor",
+   "fetch_if_empty": 1,
+   "fieldname": "floor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Stockwerk",
+   "options": "Stockwerk",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "object_name.reference_nr",
+   "fetch_if_empty": 1,
+   "fieldname": "reference_nr",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Referenz-Nr.",
+   "read_only": 1
+  },
+  {
+   "fieldname": "data_10",
+   "fieldtype": "Data"
   }
  ],
  "istable": 1,
- "modified": "2021-07-30 07:58:05.308636",
- "modified_by": "Administrator",
+ "modified": "2021-08-03 08:12:23.571314",
+ "modified_by": "nicole.gret@libracore.com",
  "module": "Sollbruchstelle",
  "name": "Mietobjekte",
  "owner": "Administrator",
