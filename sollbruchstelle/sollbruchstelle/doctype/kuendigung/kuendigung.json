@@ -111,8 +111,7 @@
    "fieldname": "mietvertrag",
    "fieldtype": "Link",
    "label": "Mietvertrag",
-   "options": "Mietvertrag",
-   "read_only": 1
+   "options": "Mietvertrag"
   },
   {
    "fieldname": "k_vorlagen",
@@ -129,7 +128,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2021-07-28 15:22:29.656355",
+ "modified": "2021-08-02 15:45:01.243484",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Kuendigung",

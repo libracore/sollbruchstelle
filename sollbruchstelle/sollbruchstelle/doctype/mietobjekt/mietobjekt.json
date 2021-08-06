@@ -23,7 +23,7 @@
   "size",
   "height",
   "price",
-  "chf_m2",
+  "qm_preis",
   "bodenbelag",
   "usage_type",
   "people",
@@ -266,6 +266,13 @@
    "label": "\u00d6ffentlich Zug\u00e4nglich"
   },
   {
+   "fieldname": "qm_preis",
+   "fieldtype": "Currency",
+   "label": "Preis [m2]"
+  }
+ ],
+ "modified": "2021-08-04 14:00:43.434599",
+
    "fieldname": "sun_surcharge",
    "fieldtype": "Percent",
    "label": "Sonnenseitezuschlag [%]"

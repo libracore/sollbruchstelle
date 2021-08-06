@@ -22,6 +22,7 @@
   "depot_amount",
   "rent_liability",
   "liability_paid",
+  "posting_fee",
   "column_break_7",
   "status",
   "tenant_type",
@@ -158,6 +159,13 @@
    "read_only": 1
   },
   {
+   "fieldname": "posting_fee",
+   "fieldtype": "Data",
+   "label": "Aufschaltgeb\u00fchren"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-08-04 14:24:12.207474",
    "fieldname": "column_break_4",
    "fieldtype": "Column Break"
   },
