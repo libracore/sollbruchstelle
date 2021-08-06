@@ -170,6 +170,7 @@
   {
    "fieldname": "object_name",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "1 Mietobjekt",
    "options": "Mietobjekt"
   },
@@ -186,7 +187,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2021-08-06 15:21:33.629460",
+ "modified": "2021-08-06 16:37:13.341595",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",

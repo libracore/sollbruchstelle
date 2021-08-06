@@ -208,7 +208,19 @@ def get_data():
                        "name": "Terms",
                        "label": _("Mietvertrag Vorlagen"),
                        "description": _("Terms")
-                   },                   
+                   },   
+                   {
+                       "type": "Doctype",
+                       "name": "Schliessanlage",
+                       "label": _("Schliessanlage"),
+                       "description": _("Schliessanlage")
+                   },
+                   {
+                       "type": "Doctype",
+                       "name": "SchluesselBatchNr",
+                       "label": _("Schlüsselnr/Batchnr"),
+                       "description": _("Schlüsselnr/Batchnr")
+                   },                  
                    {
                        "type": "Doctype",
                        "name": "Stockwerk",
