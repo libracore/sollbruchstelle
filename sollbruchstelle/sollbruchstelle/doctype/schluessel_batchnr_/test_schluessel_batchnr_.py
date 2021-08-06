@@ -6,5 +6,5 @@ from __future__ import unicode_literals
 # import frappe
 import unittest
 
-class TestSchluessel_Batchnr(unittest.TestCase):
+class TestSchluessel_Batchnr__(unittest.TestCase):
 	pass

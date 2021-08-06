@@ -276,9 +276,14 @@
    "fieldname": "sun_surcharge",
    "fieldtype": "Percent",
    "label": "Sonnenseitezuschlag [%]"
+  },
+  {
+   "fieldname": "chf_m2",
+   "fieldtype": "Currency",
+   "label": "Preis CHF/ m2"
   }
  ],
- "modified": "2021-08-04 11:34:11.443629",
+ "modified": "2021-08-06 13:24:49.379613",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietobjekt",

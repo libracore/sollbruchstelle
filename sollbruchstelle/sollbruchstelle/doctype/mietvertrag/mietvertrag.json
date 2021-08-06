@@ -21,6 +21,7 @@
   "notice_period",
   "depot_amount",
   "rent_liability",
+  "liability_paid",
   "posting_fee",
   "column_break_7",
   "status",
@@ -189,10 +190,17 @@
    "fieldtype": "Link",
    "label": "1 Mietobjekt",
    "options": "Mietobjekt"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "liability_paid",
+   "fieldtype": "Select",
+   "label": "Mietzins bezahlt?",
+   "options": "\nJa\nNein"
   }
  ],
  "is_submittable": 1,
- "modified": "2021-08-05 14:33:09.955856",
+ "modified": "2021-08-06 13:33:11.624484",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",

@@ -1,31 +1,37 @@
 {
- "autoname": "field:key_nr",
- "creation": "2021-08-03 17:11:10.295983",
+ "autoname": "format:{total_object}-{schliessanlage}",
+ "creation": "2021-08-03 16:52:06.585030",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "total_object",
   "schliessanlage",
-  "key_nr"
+  "disabled"
  ],
  "fields": [
   {
-   "fieldname": "schliessanlage",
+   "fieldname": "total_object",
    "fieldtype": "Link",
-   "label": "Schliessanlage",
-   "options": "Schliessanlage"
+   "label": "Gesamtobjekt",
+   "options": "Gesamtobjekt"
   },
   {
-   "fieldname": "key_nr",
+   "fieldname": "schliessanlage",
    "fieldtype": "Data",
-   "label": "Schl\u00fcssel/Batch-Nr.",
-   "unique": 1
+   "label": "Schliessanlage"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
   }
  ],
- "modified": "2021-08-05 16:23:42.691976",
+ "modified": "2021-08-06 09:12:24.518771",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
- "name": "Schluessel_Batchnr",
+ "name": "Schliessanlage_",
  "owner": "nicole.gret@libracore.com",
  "permissions": [
   {
