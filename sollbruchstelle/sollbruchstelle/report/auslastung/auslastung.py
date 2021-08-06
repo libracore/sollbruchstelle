@@ -14,7 +14,7 @@ def execute(filters=None):
 
 def get_columns():
     return [
-        {"label": _("Mietvertrag"), "fieldname": "naming_series", "fieldtype": "Data", "width": 100},
+        {"label": _("Mietvertrag"), "fieldname": "mietvertrag", "fieldtype": "Link", 'options': 'Mietvertrag', "width": 100},
         {"label": _("Gesamtobjekt"), "fieldname": "total_object", "fieldtype": "Link", "options": "Gesamtobjekt", "width": 102},
         {"label": _("Mietobjekt"), "fieldname": "object_name", "fieldtype": "Link", "options": "Mietobjekt", "width": 120},
         {"label": _("Mietbeginn"), "fieldname": "contract_start", "fieldtype": "Date", "width": 70},
@@ -27,14 +27,15 @@ def get_columns():
     ]
 
 def get_data(filters):
-    if not filters.total_object:
-        filters.total_object = "%"
-    if not filters.object_name:
-        filters.object_name = "%"
+    additional_filters = ''
+    if filters.total_object:
+        additional_filters += " AND `tabMietvertrag`.`total_object` = '" + filters.total_object + "'"
+    if filters.object_name:
+        additional_filters += " AND `tabMietobjekte`.`object_name` = '" + filters.object_name + "'"
 
     sql_query="""
         SELECT 
-            `tabMietvertrag`.`name` AS `name`,
+            `tabMietvertrag`.`name` AS `mietvertrag`,
             `tabMietvertrag`.`total_object` AS `total_object`,
             `tabMietobjekte`.`object_name` AS `object_name`,
             `tabMietvertrag`.`contract_start` AS `contract_start`,
@@ -48,8 +49,8 @@ def get_data(filters):
         LEFT JOIN `tabMietobjekte` ON `tabMietvertrag`.`name` = `tabMietobjekte`.`parent`
         WHERE `tabMietvertrag`.`docstatus` < 2
         AND `tabMietvertrag`.`contract_start` <= '{date}'
-        AND `tabMietvertrag`.`contract_end` >= '{date}'
-        """.format(total_object=filters.total_object, object_name=filters.object_name, date=filters.date)
+        AND `tabMietvertrag`.`contract_end` >= '{date}'{additional_filters}
+        """.format(date=filters.date, additional_filters=additional_filters)
         
     data = frappe.db.sql(sql_query, as_dict=1)
     

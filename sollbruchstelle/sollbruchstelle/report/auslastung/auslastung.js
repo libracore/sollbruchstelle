@@ -13,12 +13,14 @@ frappe.query_reports["Auslastung"] = {
                     {
                         "fieldname":"total_object",
                         "label": __("Gesamtobjekt"),
-                        "fieldtype":"Link"
+                        "fieldtype":"Link",
+                        "options": "Gesamtobjekt"
                     },
                     {
                         "fieldname":"object_name",
                         "label": __("Mietobjekt"),
-                        "fieldtype":"Link"
+                        "fieldtype":"Link",
+                        "options": "Mietobjekt"
                     }
     ]
 };

@@ -269,10 +269,8 @@
    "fieldname": "qm_preis",
    "fieldtype": "Currency",
    "label": "Preis [m2]"
-  }
- ],
- "modified": "2021-08-04 14:00:43.434599",
-
+  },
+  {
    "fieldname": "sun_surcharge",
    "fieldtype": "Percent",
    "label": "Sonnenseitezuschlag [%]"
