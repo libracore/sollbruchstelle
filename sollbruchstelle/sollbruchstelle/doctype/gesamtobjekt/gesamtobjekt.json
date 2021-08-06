@@ -1,5 +1,5 @@
 {
- "autoname": "format:{##}-{street}-{street_nr}-{zip_code}-{city}",
+ "autoname": "format:{##}-{street}-{street_nr}-{city}",
  "creation": "2021-06-30 14:33:51.426906",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -133,7 +133,7 @@
    "options": "Inclkey"
   }
  ],
- "modified": "2021-08-04 16:01:07.167171",
+ "modified": "2021-08-06 13:11:30.536499",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Gesamtobjekt",
@@ -152,7 +152,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1

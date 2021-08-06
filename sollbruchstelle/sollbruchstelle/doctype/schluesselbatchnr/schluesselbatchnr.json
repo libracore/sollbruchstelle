@@ -1,37 +1,31 @@
 {
- "autoname": "format:{total_object}-{schliessanlage}",
- "creation": "2021-08-06 09:15:11.683411",
+ "autoname": "field:key_nr",
+ "creation": "2021-08-06 09:16:10.479198",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "total_object",
   "schliessanlage",
-  "disabled"
+  "key_nr"
  ],
  "fields": [
   {
-   "fieldname": "total_object",
-   "fieldtype": "Link",
-   "label": "Gesamtobjekt",
-   "options": "Gesamtobjekt"
-  },
-  {
    "fieldname": "schliessanlage",
-   "fieldtype": "Data",
-   "label": "Schliessanlage"
+   "fieldtype": "Link",
+   "label": "Schliessanlage",
+   "options": "Schliessanlage"
   },
   {
-   "default": "0",
-   "fieldname": "disabled",
-   "fieldtype": "Check",
-   "label": "Disabled"
+   "fieldname": "key_nr",
+   "fieldtype": "Data",
+   "label": "Schl\u00fcssel/Batch-Nr.",
+   "unique": 1
   }
  ],
- "modified": "2021-08-06 09:15:11.683411",
+ "modified": "2021-08-06 09:25:40.555034",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
- "name": "Schliessanlage",
+ "name": "SchluesselBatchNr",
  "owner": "Administrator",
  "permissions": [
   {
