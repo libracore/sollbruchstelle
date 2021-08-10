@@ -2,7 +2,7 @@
 // For license information, please see license.txt
 /* eslint-disable */
 
-frappe.query_reports["Auslastung"] = {
+frappe.query_reports["Leerstandsliste"] = {
     "filters": [
                     {
                         "fieldname":"date",
@@ -21,6 +21,22 @@ frappe.query_reports["Auslastung"] = {
                         "label": __("Mietobjekt"),
                         "fieldtype":"Link",
                         "options": "Mietobjekt"
+                    },
+                    {
+                        "fieldname":"reserved",
+                        "label": __("Reserviert"),
+                        "fieldtype":"Check"
+                    },
+                    {
+                        "fieldname":"loud",
+                        "label": __("Lärmig"),
+                        "fieldtype":"Check"
+                    },
+                    {
+                        "fieldname":"disable_check",
+                        "label": __("alle Ergebnisse (deaktivier Checkboxen)"),
+                        "fieldtype":"Check",
+                        "default": 1
                     }
     ]
 };

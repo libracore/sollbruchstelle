@@ -5,7 +5,6 @@ def get_data():
     return [
         {
             "label": _("Kundendokumente"),
-            "icon": "fa fa-money",
             "items": [
                    {
                        "type": "doctype",
@@ -41,7 +40,6 @@ def get_data():
         },
         {
             "label": _("Tagesgeschäft"),
-            "icon": "octicon octicon-file-submodule",
             "items": [
                    {
                        "type": "doctype",
@@ -75,29 +73,39 @@ def get_data():
                    },
                    {
                        "type": "doctype",
-                       "name": "Schluessel",
-                       "label": _("Schlüssel"),
-                       "description": _("Schlüssel")
-                   },
-                   {
-                       "type": "doctype",
                        "name": "Abnahmeprotokoll",
                        "label": _("Abnahmeprotokoll"),
                        "description": _("Abnahmeprotokoll")
                    },
                    {
+                       "type": "doctype",
+                       "name": "Contact",
+                       "label": _("Schluesselquittung"),
+                       "description": _("Schluesselquittung")
+                   }                            
+            ]
+        },
+        {
+            "label": _("Auswertungen"),
+            "items": [
+                   {
                        "type": "report",
-                       "name": "Auslastung",
-                       "label": _("Auslastung"),
-                       "doctyp": "Mietvertrag",
-                       "description": _("Auslastung"),
+                       "name": "leerstandsliste",
+                       "label": _("Leerstandsliste"),
+                       "doctype": "Leerstandsliste",
+                       "is_query_report": True
+                   },
+                   {
+                       "type": "report",
+                       "name": "Mieterspiegel",
+                       "label": _("Mieterspiegel"),
+                       "doctype": "Mietvertrag",
                        "is_query_report": True
                    }                                  
             ]
         },
         {
-            "label": _("Einkauf"),
-            "icon": "fa fa-money",
+            "label": _("Externe/Einkauf"),
             "items": [
                    {
                        "type": "doctype",
@@ -133,7 +141,6 @@ def get_data():
         },
         {
             "label": _("HR"),
-            "icon": "octicon octicon-list-ordered",
             "items": [
                    {
                        "type": "doctype",
@@ -171,7 +178,6 @@ def get_data():
         },
         {
             "label": _("Accounting"),
-            "icon": "octicon octicon-repo",
             "items": [
                    {
                        "type": "page",
@@ -196,60 +202,65 @@ def get_data():
                        "name": "General Ledger",
                        "doctype": "GL Entry",
                        "is_query_report": True,
+                   },
+                   {
+                       "type": "doctype",
+                       "name": "Bankkonto",
+                       "label": _("Bankkonto"),
+                       "description": _("Bankkonto")
                    }
             ]
         },
         {
-            "label": _("Hilfstabellen"),
-            "icon": "octicon octicon-repo",
+            "label": _("Stammdaten"),
             "items": [
                    {
-                       "type": "Doctype",
+                       "type": "doctype",
                        "name": "Terms",
-                       "label": _("Mietvertrag Vorlagen"),
-                       "description": _("Terms")
-                   },   
+                       "label": _("Textvorlagen"),
+                       "description": _("Textvorlagen")
+                   },
                    {
-                       "type": "Doctype",
+                       "type": "doctype",
                        "name": "Schliessanlage",
                        "label": _("Schliessanlage"),
                        "description": _("Schliessanlage")
                    },
                    {
-                       "type": "Doctype",
+                       "type": "doctype",
                        "name": "SchluesselBatchNr",
                        "label": _("Schlüsselnr/Batchnr"),
                        "description": _("Schlüsselnr/Batchnr")
                    },                  
                    {
-                       "type": "Doctype",
+                       "type": "doctype",
                        "name": "Stockwerk",
                        "label": _("Stockwerk"),
                        "description": _("Stockwerk")
                    },
                    {
-                       "type": "Doctype",
-                       "name": "Anrede",
-                       "label": _("Anrede"),
-                       "description": _("Anrede")
-                   },
-                   {
-                       "type": "Doctype",
+                       "type": "doctype",
                        "name": "Priorisierung",
                        "label": _("Priorisierung"),
                        "description": _("Priorisierung")
                    },
                    {
-                       "type": "Doctype",
+                       "type": "doctype",
                        "name": "Nutzungsart",
                        "label": _("Nutzungsart"),
                        "description": _("Nutzungsart")
                    },
                    {
-                       "type": "Doctype",
+                       "type": "doctype",
                        "name": "Bodenbelag",
                        "label": _("Bodenbelag"),
                        "description": _("Bodenbelag")
+                   },
+                   {
+                       "type": "doctype",
+                       "name": "Projektname",
+                       "label": _("Projektname"),
+                       "description": _("Projektname")
                    }
             ]
         }

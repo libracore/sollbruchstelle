@@ -22,7 +22,7 @@
   "depot_amount",
   "rent_liability",
   "liability_paid",
-  "posting_fee",
+  "setup_fee",
   "column_break_7",
   "status",
   "tenant_type",
@@ -157,11 +157,6 @@
    "read_only": 1
   },
   {
-   "fieldname": "posting_fee",
-   "fieldtype": "Data",
-   "label": "Aufschaltgeb\u00fchren"
-  },
-  {
    "fieldname": "notice_period",
    "fieldtype": "Select",
    "label": "K\u00fcndigungsfrist",
@@ -184,10 +179,17 @@
   {
    "fieldname": "column_break_4",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "total_object.setup_fee",
+   "fetch_if_empty": 1,
+   "fieldname": "setup_fee",
+   "fieldtype": "Currency",
+   "label": "Aufschaltgeb\u00fchren"
   }
  ],
  "is_submittable": 1,
- "modified": "2021-08-06 16:37:13.341595",
+ "modified": "2021-08-09 15:15:18.011983",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",
