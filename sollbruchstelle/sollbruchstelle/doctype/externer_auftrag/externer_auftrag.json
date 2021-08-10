@@ -1,17 +1,16 @@
 {
- "autoname": "format:Auftrag-{#####}",
  "creation": "2021-08-05 12:57:46.686793",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "attach_1",
   "contact",
   "total_object",
   "object_name",
   "size",
   "job_type",
   "supplier",
-  "until_date",
   "job_details",
   "column_break_8",
   "done",
@@ -21,43 +20,36 @@
   {
    "fieldname": "contact",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Auftragersteller*In",
-   "options": "Contact",
-   "reqd": 1
+   "options": "Contact"
   },
   {
    "fieldname": "total_object",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Gesamtobjekt",
-   "options": "Gesamtobjekt",
-   "reqd": 1
+   "options": "Gesamtobjekt"
   },
   {
    "fieldname": "object_name",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Mietobjekt/Raum",
-   "options": "Mietobjekt",
-   "reqd": 1
+   "options": "Mietobjekt"
   },
   {
    "fieldname": "job_details",
    "fieldtype": "Text Editor",
-   "label": "Auftrag Details"
+   "label": "Auftrags Details"
   },
   {
    "fieldname": "job_type",
    "fieldtype": "Select",
    "label": "Auftragstyp",
-   "options": "Reinigung\nReparatur\nSchl\u00fcsselantrag\nInternet\nAnderes",
-   "reqd": 1
+   "options": "Reinigung\nReparatur\nSchl\u00fcsselantrag\nInternet\nAnderes"
   },
   {
    "fieldname": "supplier",
    "fieldtype": "Link",
-   "label": "Ausf\u00fchrung durch",
+   "label": "Auftragsnehmer*In",
    "options": "Supplier"
   },
   {
@@ -76,20 +68,19 @@
    "label": "Notizen Auftragnehmer*In"
   },
   {
+   "fieldname": "attach_1",
+   "fieldtype": "Attach"
+  },
+  {
    "fetch_from": "object_name.size",
    "fetch_if_empty": 1,
    "fieldname": "size",
    "fieldtype": "Data",
    "label": "Raumgr\u00f6sse [m2]",
    "read_only": 1
-  },
-  {
-   "fieldname": "until_date",
-   "fieldtype": "Date",
-   "label": "Auszuf\u00fchren bis"
   }
  ],
- "modified": "2021-08-10 14:39:17.496019",
+ "modified": "2021-08-10 16:35:30.258547",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Externer Auftrag",

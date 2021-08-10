@@ -105,6 +105,29 @@ def get_data():
             ]
         },
         {
+            "label": _("Formularansicht des Portals"),
+            "items": [
+                   {
+                       "type": "doctype",
+                       "name": "Aushang",
+                       "label": _("Aushang"),
+                       "description": _("Aushang")
+                   },
+                   {
+                       "type": "doctype",
+                       "name": "Externer Auftrag",
+                       "label": _("Externer Auftrag"),
+                       "description": _("Externer Auftrag")
+                   },
+                   {
+                       "type": "doctype",
+                       "name": "Raumbeschriftung",
+                       "label": _("Raumbeschriftung"),
+                       "description": _("Raumbeschriftung")
+                   }                              
+            ]
+        },
+        {
             "label": _("Externe/Einkauf"),
             "items": [
                    {
