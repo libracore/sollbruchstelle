@@ -1,0 +1,64 @@
+{
+ "autoname": "format:Raumbeschriftung-{#####}",
+ "creation": "2021-08-10 16:41:43.925525",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant_name",
+  "tenant_company",
+  "total_object",
+  "object_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "tenant_name",
+   "fieldtype": "Text Editor",
+   "label": "Namen",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenant_company",
+   "fieldtype": "Data",
+   "label": "Unternehmen",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_object",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Geb\u00e4ude",
+   "options": "Gesamtobjekt",
+   "reqd": 1
+  },
+  {
+   "fieldname": "object_name",
+   "fieldtype": "Link",
+   "label": "Raum",
+   "options": "Mietobjekt"
+  }
+ ],
+ "modified": "2021-08-10 16:52:20.775613",
+ "modified_by": "Administrator",
+ "module": "Sollbruchstelle",
+ "name": "Raumbeschriftung",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

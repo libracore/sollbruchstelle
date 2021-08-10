@@ -8,14 +8,16 @@
  "field_order": [
   "title_section",
   "object_name",
+  "reserved",
+  "show_in_website",
   "column_break_1",
   "total_object",
   "street_nr",
   "reference_nr",
   "column_break_4",
-  "data_8",
   "adresse_section",
   "column_break_28",
+  "data_12",
   "details",
   "floor",
   "floor_surcharge",
@@ -23,7 +25,7 @@
   "size",
   "height",
   "price",
-  "qm_preis",
+  "chf_m2",
   "bodenbelag",
   "usage_type",
   "people",
@@ -45,8 +47,11 @@
   "acces_public_transport",
   "elevator_people",
   "elevator_goods",
+  "loud",
+  "damages",
   "rejected_prospects_section",
-  "rejected_prospects"
+  "rejected_prospects",
+  "setup_fee"
  ],
  "fields": [
   {
@@ -256,19 +261,10 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "data_8",
-   "fieldtype": "Data"
-  },
-  {
    "default": "0",
    "fieldname": "accessability",
    "fieldtype": "Check",
    "label": "\u00d6ffentlich Zug\u00e4nglich"
-  },
-  {
-   "fieldname": "qm_preis",
-   "fieldtype": "Currency",
-   "label": "Preis [m2]"
   },
   {
    "fieldname": "sun_surcharge",
@@ -279,9 +275,44 @@
    "fieldname": "chf_m2",
    "fieldtype": "Currency",
    "label": "Preis CHF/ m2"
+  },
+  {
+   "fetch_from": "total_object.setup_fee",
+   "fetch_if_empty": 1,
+   "fieldname": "setup_fee",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Aufschaltgeb\u00fchren"
+  },
+  {
+   "default": "0",
+   "fieldname": "reserved",
+   "fieldtype": "Check",
+   "label": "Reserviert"
+  },
+  {
+   "fieldname": "damages",
+   "fieldtype": "Small Text",
+   "label": "Sch\u00e4den"
+  },
+  {
+   "default": "0",
+   "fieldname": "loud",
+   "fieldtype": "Check",
+   "label": "L\u00e4rmig"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_in_website",
+   "fieldtype": "Check",
+   "label": "Auf Webseite zeigen"
+  },
+  {
+   "fieldname": "data_12",
+   "fieldtype": "Data"
   }
  ],
- "modified": "2021-08-06 13:24:49.379613",
+ "modified": "2021-08-10 14:49:36.881345",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietobjekt",
