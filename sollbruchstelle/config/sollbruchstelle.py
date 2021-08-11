@@ -90,9 +90,9 @@ def get_data():
             "items": [
                    {
                        "type": "report",
-                       "name": "leerstandsliste",
+                       "name": "Leerstandsliste",
                        "label": _("Leerstandsliste"),
-                       "doctype": "Leerstandsliste",
+                       "doctype": "Mietvertrag",
                        "is_query_report": True
                    },
                    {
