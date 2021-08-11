@@ -92,7 +92,7 @@ def get_data():
                        "type": "report",
                        "name": "Leerstandsliste",
                        "label": _("Leerstandsliste"),
-                       "doctype": "Leerstandsliste",
+                       "doctype": "Mietvertrag",
                        "is_query_report": True
                    },
                    {
