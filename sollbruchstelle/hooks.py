@@ -109,6 +109,11 @@ doctype_js = {
 # 		"sollbruchstelle.tasks.weekly"
 # 	]
 # }
+scheduler_events = {
+	"daily": [
+		"sollbruchstelle.sollbruchstelle.utils.utils.cleanup_contacts"
+	]
+}
 
 # Testing
 # -------
