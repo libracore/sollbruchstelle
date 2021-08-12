@@ -7,7 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "title_section",
-  "object_name",
+  "raum",
   "reserved",
   "show_in_website",
   "column_break_1",
@@ -186,12 +186,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "object_name",
-   "fieldtype": "Data",
-   "label": "Raum/Mietobjekt",
-   "unique": 1
-  },
-  {
    "fieldname": "details",
    "fieldtype": "Section Break",
    "label": "Details"
@@ -310,10 +304,17 @@
   {
    "fieldname": "data_12",
    "fieldtype": "Data"
+  },
+  {
+   "fieldname": "raum",
+   "fieldtype": "Data",
+   "label": "Raum/Mietobjekt",
+   "options": "Raum",
+   "unique": 1
   }
  ],
- "modified": "2021-08-10 14:49:36.881345",
- "modified_by": "Administrator",
+ "modified": "2021-08-12 09:05:08.209646",
+ "modified_by": "nicole.gret@libracore.com",
  "module": "Sollbruchstelle",
  "name": "Mietobjekt",
  "owner": "Administrator",
