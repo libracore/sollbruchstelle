@@ -299,6 +299,7 @@
    "default": "0",
    "fieldname": "show_in_website",
    "fieldtype": "Check",
+   "hidden": 1,
    "label": "Auf Webseite zeigen"
   },
   {
@@ -313,7 +314,7 @@
    "unique": 1
   }
  ],
- "modified": "2021-08-12 09:05:08.209646",
+ "modified": "2021-08-12 17:08:39.912661",
  "modified_by": "nicole.gret@libracore.com",
  "module": "Sollbruchstelle",
  "name": "Mietobjekt",
