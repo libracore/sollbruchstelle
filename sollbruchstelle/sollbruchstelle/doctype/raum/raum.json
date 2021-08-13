@@ -1,24 +1,32 @@
 {
- "autoname": "field:floor_type",
- "creation": "2021-06-28 13:37:57.285265",
+ "autoname": "format:{room}-{total_object}",
+ "creation": "2021-08-13 14:07:25.691941",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "floor_type"
+  "room",
+  "total_object"
  ],
  "fields": [
   {
-   "fieldname": "floor_type",
+   "fieldname": "room",
    "fieldtype": "Data",
-   "label": "Bodenbelag",
-   "unique": 1
+   "label": "Raum"
+  },
+  {
+   "fieldname": "total_object",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gesamtobjekt/Geb\u00e4ude",
+   "options": "Gesamtobjekt",
+   "reqd": 1
   }
  ],
- "modified": "2021-08-13 13:32:11.148454",
+ "modified": "2021-08-13 15:07:08.411144",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
- "name": "Bodenbelag",
+ "name": "Raum",
  "owner": "Administrator",
  "permissions": [
   {
@@ -30,18 +38,6 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Sales Manager",
    "share": 1,
    "write": 1
   }

@@ -1,0 +1,257 @@
+{
+ "autoname": "format: Anmeldung-{#####}",
+ "creation": "2021-08-12 09:10:24.291975",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "contact",
+  "start_date",
+  "end_date",
+  "room_section",
+  "total_object",
+  "object_name",
+  "floor",
+  "column_break_8",
+  "room",
+  "usage_type",
+  "nr_tenants",
+  "parking_section",
+  "aussenparkplatz_mattenhofstrasse",
+  "garage",
+  "key_section",
+  "key_1",
+  "key_2",
+  "key_3",
+  "cleaning_section",
+  "cleaning_check",
+  "naming_section",
+  "aussenbeschriftung",
+  "beschriftung_name",
+  "beschriftung_tel",
+  "beschriftung_raum",
+  "column_break_27",
+  "link_yes",
+  "link_company",
+  "link_url",
+  "internet_section",
+  "no_internet",
+  "hotspot",
+  "thenet"
+ ],
+ "fields": [
+  {
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Kontakt",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Mietbeginn"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "Mietende (siehe sp\u00e4testens im Text oben)"
+  },
+  {
+   "fieldname": "room_section",
+   "fieldtype": "Section Break",
+   "label": "R\u00e4umlichkeiten"
+  },
+  {
+   "fieldname": "total_object",
+   "fieldtype": "Link",
+   "label": "Gesamtobjekt/Liegenschaft",
+   "options": "Gesamtobjekt"
+  },
+  {
+   "fieldname": "object_name",
+   "fieldtype": "Link",
+   "label": "Mietobjekt/Raum",
+   "options": "Mietobjekt"
+  },
+  {
+   "fieldname": "floor",
+   "fieldtype": "Link",
+   "label": "Gew\u00fcnschte Etage",
+   "options": "Stockwerk"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "label": "Gew\u00fcnschte Raum-Nr.",
+   "options": "Raum"
+  },
+  {
+   "fieldname": "usage_type",
+   "fieldtype": "Data",
+   "label": "Nutzungsart"
+  },
+  {
+   "fieldname": "nr_tenants",
+   "fieldtype": "Int",
+   "label": "Anzahl Personen"
+  },
+  {
+   "fieldname": "parking_section",
+   "fieldtype": "Section Break",
+   "label": "Parkpl\u00e4tze"
+  },
+  {
+   "default": "0",
+   "fieldname": "aussenparkplatz_mattenhofstrasse",
+   "fieldtype": "Check",
+   "label": "Aussenparkplatz Mattenhofstrasse"
+  },
+  {
+   "default": "0",
+   "fieldname": "garage",
+   "fieldtype": "Check",
+   "label": "Tiefgarageneinstellplatz Belpstrasse 53"
+  },
+  {
+   "fieldname": "key_section",
+   "fieldtype": "Section Break",
+   "label": "Schl\u00fcssel/Badges"
+  },
+  {
+   "fieldname": "key_1",
+   "fieldtype": "Int",
+   "label": "Haupteingang Mattenhofstrasse 5 | 3007 Bern"
+  },
+  {
+   "fieldname": "key_2",
+   "fieldtype": "Int",
+   "label": "Haupteingang Belpstrasse 53 | 3007 Bern"
+  },
+  {
+   "fieldname": "key_3",
+   "fieldtype": "Int",
+   "label": "Schl\u00fcssel f\u00fcr den gemieteten Raum"
+  },
+  {
+   "fieldname": "cleaning_section",
+   "fieldtype": "Section Break",
+   "label": "Reinigung"
+  },
+  {
+   "default": "0",
+   "fieldname": "cleaning_check",
+   "fieldtype": "Check",
+   "label": "Gerne lasse ich die R\u00e4umlichkeiten w\u00e4hrend meiner Mietdauer \u00fcber die Firma Hasuev Reinigung vornehmen und w\u00fcnsche eine unverbindliche Offert"
+  },
+  {
+   "fieldname": "naming_section",
+   "fieldtype": "Section Break",
+   "label": "Beschriftungen"
+  },
+  {
+   "default": "0",
+   "fieldname": "aussenbeschriftung",
+   "fieldtype": "Check",
+   "label": "Aussenbeschriftung gew\u00fcnscht"
+  },
+  {
+   "fieldname": "beschriftung_name",
+   "fieldtype": "Data",
+   "label": "Beschriftungstext (Name / Vorname und oder Firma)"
+  },
+  {
+   "fieldname": "beschriftung_tel",
+   "fieldtype": "Data",
+   "label": "Tel. Nr. (falls erw\u00fcnscht)"
+  },
+  {
+   "fieldname": "beschriftung_raum",
+   "fieldtype": "Data",
+   "label": "Raum-Nr."
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "link_yes",
+   "fieldtype": "Check",
+   "label": "Gerne w\u00fcnsche ich eine Verlinkung auf der Website die-sollbruchstelle.org"
+  },
+  {
+   "fieldname": "link_company",
+   "fieldtype": "Data",
+   "label": "Name / Firma"
+  },
+  {
+   "fieldname": "link_url",
+   "fieldtype": "Data",
+   "label": "Link auf folgende Website"
+  },
+  {
+   "fieldname": "internet_section",
+   "fieldtype": "Section Break",
+   "label": "Internet"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_internet",
+   "fieldtype": "Check",
+   "label": "Ich ben\u00f6tige kein Internet"
+  },
+  {
+   "default": "0",
+   "fieldname": "hotspot",
+   "fieldtype": "Check",
+   "label": "Ich arbeite \u00fcber meinen eigenen Hotspot"
+  },
+  {
+   "default": "0",
+   "fieldname": "thenet",
+   "fieldtype": "Check",
+   "label": "Aufschaltung eines Internetzugangs \u00fcber die Firma TheNet. Offerte erw\u00fcnscht."
+  }
+ ],
+ "modified": "2021-08-13 15:23:33.075330",
+ "modified_by": "Administrator",
+ "module": "Sollbruchstelle",
+ "name": "Anmeldung",
+ "owner": "nicole.gret@libracore.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "contact",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

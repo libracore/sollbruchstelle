@@ -20,8 +20,8 @@
  "is_standard": 1,
  "login_required": 1,
  "max_attachment_size": 0,
- "modified": "2021-08-13 08:01:18.604737",
- "modified_by": "nicole.gret@libracore.com",
+ "modified": "2021-08-13 15:25:32.538330",
+ "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "anmeldung",
  "owner": "nicole.gret@libracore.com",
@@ -115,11 +115,12 @@
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "floor",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "hidden": 0,
    "label": "Gew\u00fcnschte Etage",
    "max_length": 0,
    "max_value": 0,
+   "options": "Stockwerk",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
@@ -138,11 +139,12 @@
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "room",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "hidden": 0,
    "label": "Gew\u00fcnschte Raum-Nr.",
    "max_length": 0,
    "max_value": 0,
+   "options": "Raum",
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0

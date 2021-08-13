@@ -28,7 +28,7 @@
    "options": "Mietvertrag\nKuendigung"
   }
  ],
- "modified": "2021-07-28 14:55:07.097570",
+ "modified": "2021-08-13 13:31:28.338831",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Terms",
@@ -43,6 +43,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
    "share": 1,
    "write": 1
   }
