@@ -13,7 +13,7 @@
  "fields": [
   {
    "fieldname": "tenant_name",
-   "fieldtype": "Text Editor",
+   "fieldtype": "Text",
    "label": "Namen",
    "reqd": 1
   },
@@ -38,7 +38,7 @@
    "options": "Mietobjekt"
   }
  ],
- "modified": "2021-08-10 16:52:20.775613",
+ "modified": "2021-08-13 13:27:53.805441",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Raumbeschriftung",
@@ -53,6 +53,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
    "share": 1,
    "write": 1
   }

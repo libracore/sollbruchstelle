@@ -1,23 +1,20 @@
 {
  "allow_rename": 1,
- "autoname": "format:{object_name} - {total_object}",
+ "autoname": "format:{room_link} - {total_object}",
  "creation": "2021-06-28 13:24:38.487489",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "title_section",
-  "raum",
-  "reserved",
-  "show_in_website",
-  "column_break_1",
   "total_object",
+  "column_break_1",
+  "room_link",
+  "reserved",
   "street_nr",
   "reference_nr",
   "column_break_4",
   "adresse_section",
-  "column_break_28",
-  "data_12",
   "details",
   "floor",
   "floor_surcharge",
@@ -178,10 +175,6 @@
    "label": "Adresse"
   },
   {
-   "fieldname": "column_break_28",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "title_section",
    "fieldtype": "Section Break"
   },
@@ -296,26 +289,16 @@
    "label": "L\u00e4rmig"
   },
   {
-   "default": "0",
-   "fieldname": "show_in_website",
-   "fieldtype": "Check",
-   "hidden": 1,
-   "label": "Auf Webseite zeigen"
-  },
-  {
-   "fieldname": "data_12",
-   "fieldtype": "Data"
-  },
-  {
-   "fieldname": "raum",
-   "fieldtype": "Data",
+   "fieldname": "room_link",
+   "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Raum/Mietobjekt",
    "options": "Raum",
-   "unique": 1
+   "reqd": 1
   }
  ],
- "modified": "2021-08-12 17:08:39.912661",
- "modified_by": "nicole.gret@libracore.com",
+ "modified": "2021-08-13 15:05:53.948910",
+ "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietobjekt",
  "owner": "Administrator",
@@ -329,6 +312,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
    "share": 1,
    "write": 1
   }

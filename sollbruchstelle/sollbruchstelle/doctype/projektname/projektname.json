@@ -34,7 +34,7 @@
    "label": "disabled"
   }
  ],
- "modified": "2021-07-30 12:00:43.101109",
+ "modified": "2021-08-13 13:30:55.263305",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Projektname",
@@ -49,6 +49,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
    "share": 1,
    "write": 1
   }
