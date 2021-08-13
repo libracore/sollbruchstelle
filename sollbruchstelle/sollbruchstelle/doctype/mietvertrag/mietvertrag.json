@@ -5,6 +5,11 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "contract_type",
+  "contract",
+  "contract_link",
+  "nachtrag_nr",
+  "section_x",
   "naming_series",
   "total_object",
   "customer",
@@ -186,10 +191,39 @@
    "fieldname": "setup_fee",
    "fieldtype": "Currency",
    "label": "Aufschaltgeb\u00fchren"
+  },
+  {
+   "default": "Mietvertrag",
+   "fieldname": "contract_type",
+   "fieldtype": "Select",
+   "label": "Vertragstyp",
+   "options": "Mietvertrag\nNachtrag",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_x",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.contract_type == \"Nachtrag\"",
+   "fieldname": "contract_link",
+   "fieldtype": "Link",
+   "label": "Link zum Mietvertrag",
+   "options": "Mietvertrag"
+  },
+  {
+   "depends_on": "eval:doc.contract_type == \"Nachtrag\"",
+   "fieldname": "nachtrag_nr",
+   "fieldtype": "Int",
+   "label": "Nachtrag Nr."
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Column Break"
   }
  ],
  "is_submittable": 1,
- "modified": "2021-08-13 13:28:41.133196",
+ "modified": "2021-08-13 15:53:50.226436",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",
