@@ -1,5 +1,5 @@
 {
- "autoname": "format:{##}-{street}-{street_nr}-{city}",
+ "autoname": "format:{street}-{street_nr}-{city}",
  "creation": "2021-06-30 14:33:51.426906",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -134,7 +134,7 @@
    "options": "Inclkey"
   }
  ],
- "modified": "2021-08-13 13:35:04.735294",
+ "modified": "2021-08-17 11:05:38.664746",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Gesamtobjekt",
