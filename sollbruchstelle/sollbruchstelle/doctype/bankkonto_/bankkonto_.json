@@ -1,6 +1,6 @@
 {
  "autoname": "format:{title} {iban}",
- "creation": "2021-08-18 10:12:04.539301",
+ "creation": "2021-07-30 13:55:46.584316",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -13,14 +13,10 @@
  ],
  "fields": [
   {
-   "fieldname": "title",
-   "fieldtype": "Data",
-   "label": "Titel/Bemerkung"
-  },
-  {
    "fieldname": "bank",
    "fieldtype": "Data",
-   "label": "Bank"
+   "label": "Bank",
+   "unique": 1
   },
   {
    "fieldname": "bic",
@@ -30,18 +26,24 @@
   {
    "fieldname": "iban",
    "fieldtype": "Data",
-   "label": "IBAN"
+   "label": "IBAN",
+   "unique": 1
   },
   {
    "fieldname": "account_owner",
    "fieldtype": "Data",
    "label": "Kontoinhaberin"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Titel/Bemerkung"
   }
  ],
- "modified": "2021-08-18 10:12:13.046878",
+ "modified": "2021-08-18 10:09:18.796963",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
- "name": "Bankkonto",
+ "name": "Bankkonto_",
  "owner": "Administrator",
  "permissions": [
   {

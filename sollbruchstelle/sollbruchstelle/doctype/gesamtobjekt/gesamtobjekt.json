@@ -87,7 +87,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Bankkonto",
-   "options": "Bankkonto",
+   "options": "Bankkonto_",
    "reqd": 1
   },
   {
@@ -134,7 +134,7 @@
    "options": "Inclkey"
   }
  ],
- "modified": "2021-08-17 11:05:38.664746",
+ "modified": "2021-08-18 10:11:15.430862",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Gesamtobjekt",
