@@ -44,6 +44,7 @@
   {
    "fieldname": "title",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Titel"
   },
   {
