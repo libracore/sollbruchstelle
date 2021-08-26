@@ -61,12 +61,6 @@ def get_data():
                    },
                    {
                        "type": "doctype",
-                       "name": "Nachtrag",
-                       "label": _("Nachtrag"),
-                       "description": _("Nachtrag")
-                   },
-                   {
-                       "type": "doctype",
                        "name": "Kuendigung",
                        "label": _("Kündigung"),
                        "description": _("Kuendigung")
