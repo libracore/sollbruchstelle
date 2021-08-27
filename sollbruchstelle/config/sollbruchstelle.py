@@ -56,7 +56,7 @@ def get_data():
                    {
                        "type": "doctype",
                        "name": "Mietvertrag",
-                       "label": _("Mietvertrag"),
+                       "label": _("Mietvertrag/Nachtrag"),
                        "description": _("Mietvertrag")
                    },
                    {
@@ -118,6 +118,12 @@ def get_data():
                        "name": "Raumbeschriftung",
                        "label": _("Raumbeschriftung"),
                        "description": _("Raumbeschriftung")
+                   },
+                   {
+                       "type": "doctype",
+                       "name": "Anmeldung",
+                       "label": _("Anmeldeformular MieterInnen"),
+                       "description": _("Anmeldeforumlar MieterInnen")
                    }                              
             ]
         },
@@ -194,7 +200,7 @@ def get_data():
             ]
         },
         {
-            "label": _("Accounting"),
+            "label": _("Buchhaltung"),
             "items": [
                    {
                        "type": "page",
@@ -260,12 +266,6 @@ def get_data():
                        "name": "Priorisierung",
                        "label": _("Priorisierung"),
                        "description": _("Priorisierung")
-                   },
-                   {
-                       "type": "doctype",
-                       "name": "Nutzungsart",
-                       "label": _("Nutzungsart"),
-                       "description": _("Nutzungsart")
                    },
                    {
                        "type": "doctype",

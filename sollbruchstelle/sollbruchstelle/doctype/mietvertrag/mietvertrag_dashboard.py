@@ -15,6 +15,10 @@ def get_data():
             {
                 'label': _("Abnahmeprotokoll"),
                 'items': ['Abnahmeprotokoll']
+            },
+            {
+                'label': _("Sales Invoice"),
+                'items': ['Sales Invoice']
             }
         ]
     }
