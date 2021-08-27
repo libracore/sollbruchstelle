@@ -19,8 +19,8 @@
  "is_standard": 1,
  "login_required": 1,
  "max_attachment_size": 0,
- "modified": "2021-08-27 09:06:29.813821",
- "modified_by": "nicole.gret@libracore.com",
+ "modified": "2021-08-27 10:24:16.077927",
+ "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "adresse-vor-kontaktangaben-ausf\u00fcllen",
  "owner": "Administrator",
@@ -76,6 +76,7 @@
   },
   {
    "allow_read_on_all_link_options": 0,
+   "description": "bsp. Postfach, c/o ..",
    "fieldname": "address_line2",
    "fieldtype": "Data",
    "hidden": 0,
@@ -84,18 +85,6 @@
    "max_value": 0,
    "read_only": 0,
    "reqd": 0,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
-   "fieldname": "city",
-   "fieldtype": "Data",
-   "hidden": 0,
-   "label": "City/Town",
-   "max_length": 0,
-   "max_value": 0,
-   "read_only": 0,
-   "reqd": 1,
    "show_in_filter": 0
   },
   {
@@ -124,7 +113,31 @@
   },
   {
    "allow_read_on_all_link_options": 0,
-   "default": "Switzerland",
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "hidden": 0,
+   "label": "Postal Code",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "hidden": 0,
+   "label": "City/Town",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "default": "Schweiz",
    "fieldname": "country",
    "fieldtype": "Link",
    "hidden": 0,
@@ -132,18 +145,6 @@
    "max_length": 0,
    "max_value": 0,
    "options": "Country",
-   "read_only": 0,
-   "reqd": 1,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
-   "fieldname": "pincode",
-   "fieldtype": "Data",
-   "hidden": 0,
-   "label": "Postal Code",
-   "max_length": 0,
-   "max_value": 0,
    "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0
