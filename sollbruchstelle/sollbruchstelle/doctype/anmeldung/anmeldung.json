@@ -198,11 +198,11 @@
    "fieldname": "object_name_child",
    "fieldtype": "Table",
    "label": "Mietobjekt/Raum",
-   "options": "Anmeldemietobjekte_"
+   "options": "Anmeldemietobjekte"
   }
  ],
- "modified": "2021-08-27 10:09:12.666394",
- "modified_by": "nicole.gret@libracore.com",
+ "modified": "2021-08-27 10:13:24.705970",
+ "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Anmeldung",
  "owner": "nicole.gret@libracore.com",
