@@ -19,7 +19,7 @@
  "is_standard": 1,
  "login_required": 1,
  "max_attachment_size": 0,
- "modified": "2021-08-12 09:42:33.287669",
+ "modified": "2021-08-30 14:58:25.232200",
  "modified_by": "nicole.gret@libracore.com",
  "module": "Sollbruchstelle",
  "name": "auftrag",
@@ -36,17 +36,6 @@
  "success_url": "/auftrag",
  "title": "Auftrag",
  "web_form_fields": [
-  {
-   "allow_read_on_all_link_options": 0,
-   "fieldname": "attach_1",
-   "fieldtype": "Attach",
-   "hidden": 0,
-   "max_length": 0,
-   "max_value": 0,
-   "read_only": 0,
-   "reqd": 0,
-   "show_in_filter": 0
-  },
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "contact",

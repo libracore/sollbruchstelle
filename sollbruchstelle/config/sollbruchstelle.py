@@ -280,5 +280,22 @@ def get_data():
                        "description": _("Projektname")
                    }
             ]
+        },
+        {
+            "label": _("Newsletter"),
+            "items": [
+                   {
+                       "type": "doctype",
+                       "name": "Email Group",
+                       "label": _("Email Gruppe"),
+                       "description": _("Email Gruppe")
+                   },
+                   {
+                       "type": "doctype",
+                       "name": "Newsletter",
+                       "label": _("Newsletter"),
+                       "description": _("Newsletter")
+                   }
+            ]
         }
     ]
