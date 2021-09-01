@@ -10,7 +10,7 @@ def get_data():
             },
             {
                 'label': _("Nachtrag"),
-                'items': ['Nachtrag']
+                'items': ['Mietvertrag']
             },
             {
                 'label': _("Abnahmeprotokoll"),

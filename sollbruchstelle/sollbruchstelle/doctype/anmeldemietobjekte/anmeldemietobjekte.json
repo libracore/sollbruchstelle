@@ -29,8 +29,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Stockwerk",
-   "options": "Stockwerk",
-   "read_only": 1
+   "options": "Stockwerk"
   },
   {
    "fieldname": "usage_type",
@@ -74,7 +73,7 @@
   }
  ],
  "istable": 1,
- "modified": "2021-08-27 10:10:00.830701",
+ "modified": "2021-09-01 11:39:38.945941",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Anmeldemietobjekte",

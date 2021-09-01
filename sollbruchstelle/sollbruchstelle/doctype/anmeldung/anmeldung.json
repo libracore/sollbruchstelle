@@ -201,7 +201,7 @@
    "options": "Anmeldemietobjekte"
   }
  ],
- "modified": "2021-08-27 10:13:24.705970",
+ "modified": "2021-09-01 17:11:32.691587",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Anmeldung",
@@ -232,7 +232,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "search_fields": "contact",
  "sort_field": "modified",
  "sort_order": "DESC",
