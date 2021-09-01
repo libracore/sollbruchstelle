@@ -12,6 +12,7 @@
   "section_x",
   "naming_series",
   "total_object",
+  "project",
   "customer",
   "customer_2",
   "column_break_4",
@@ -46,6 +47,7 @@
   {
    "fieldname": "title",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Titel"
   },
   {
@@ -256,10 +258,18 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "1 Ref. Nr."
+  },
+  {
+   "fetch_from": "gesamtobjekt.project_name",
+   "fetch_if_empty": 1,
+   "fieldname": "project",
+   "fieldtype": "Data",
+   "label": "Projekt",
+   "read_only": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2021-09-01 07:30:16.012605",
+ "modified": "2021-09-01 09:29:30.373497",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",

@@ -13,10 +13,11 @@ def generate_sinv(doc):
     date1 = mietvertrag.contract_start
     date2 = mietvertrag.contract_end
     
-    date_delta = date2 - date1
+    #calc total contract cost
+    #date_delta = date2 - date1
 
-    days = date_delta.days / 7
-    months = days / 4
+    #days = date_delta.days / 7
+    #months = days / 4
     #rest = days % 4
     
     day_diff = date_diff(mietvertrag.contract_start, today())
@@ -30,15 +31,17 @@ def generate_sinv(doc):
         'doctype': 'Sales Invoice',
         'customer': mietvertrag.customer,
         'due_date': due_date,
-        'supplier_group': "All Supplier Groups",
-        'mietvertrag': mietvertrag.name
+        'mietvertrag': mietvertrag.name,
+        'project_name': mietvertrag.project,
+        'taxes_and_charges': 'Steuerfrei - S'
     })
     
     for i in mietvertrag.mietobjekte:
         row = sinv.append("items", {})
         row.item_code = "M000"
         row.item_name = i.object_name
-        row.qty = int(months)
+        #row.qty = int(months)
+        row.qty = 1
         row.rate = i.rate
         
         # second_row = sinv.append("items", {})
