@@ -7,7 +7,7 @@
  "field_order": [
   "contract_type",
   "contract",
-  "contract_link",
+  "mietvertrag",
   "nachtrag_nr",
   "section_x",
   "naming_series",
@@ -213,13 +213,6 @@
   },
   {
    "depends_on": "eval:doc.contract_type == \"Nachtrag\"",
-   "fieldname": "contract_link",
-   "fieldtype": "Link",
-   "label": "Link zum Mietvertrag",
-   "options": "Mietvertrag"
-  },
-  {
-   "depends_on": "eval:doc.contract_type == \"Nachtrag\"",
    "fieldname": "nachtrag_nr",
    "fieldtype": "Data",
    "label": "Nachtrag Nr."
@@ -266,10 +259,17 @@
    "fieldtype": "Data",
    "label": "Projekt",
    "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.contract_type == \"Nachtrag\"",
+   "fieldname": "mietvertrag",
+   "fieldtype": "Link",
+   "label": "Link zum Mietvertrag",
+   "options": "Mietvertrag"
   }
  ],
  "is_submittable": 1,
- "modified": "2021-09-01 09:29:30.373497",
+ "modified": "2021-09-01 17:15:21.305067",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",
@@ -302,7 +302,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1

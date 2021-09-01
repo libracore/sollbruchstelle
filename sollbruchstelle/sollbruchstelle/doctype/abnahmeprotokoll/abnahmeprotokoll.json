@@ -162,7 +162,7 @@
    "options": "Mietobjekt"
   }
  ],
- "modified": "2021-08-13 13:29:03.807409",
+ "modified": "2021-09-01 17:12:13.006065",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Abnahmeprotokoll",
@@ -193,7 +193,6 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1
