@@ -21,6 +21,7 @@
   "signature_date",
   "object_section",
   "object_name",
+  "ref_link",
   "mietobjekte",
   "section_break_2",
   "title",
@@ -35,6 +36,7 @@
   "status",
   "tenant_type",
   "usage_type",
+  "notes",
   "terms_section",
   "tc_name",
   "terms",
@@ -174,6 +176,7 @@
    "fieldname": "object_name",
    "fieldtype": "Link",
    "hidden": 1,
+   "in_standard_filter": 1,
    "label": "1 Mietobjekt",
    "options": "Mietobjekt"
   },
@@ -217,7 +220,7 @@
   {
    "depends_on": "eval:doc.contract_type == \"Nachtrag\"",
    "fieldname": "nachtrag_nr",
-   "fieldtype": "Int",
+   "fieldtype": "Data",
    "label": "Nachtrag Nr."
   },
   {
@@ -241,10 +244,23 @@
    "fieldname": "signature_date",
    "fieldtype": "Date",
    "label": "Unterschriftsdatum"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notizen"
+  },
+  {
+   "fieldname": "ref_link",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "1 Ref. Nr."
   }
  ],
  "is_submittable": 1,
- "modified": "2021-08-24 12:16:04.018238",
+ "modified": "2021-09-01 07:30:16.012605",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",
