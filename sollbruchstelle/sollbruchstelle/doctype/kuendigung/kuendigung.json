@@ -9,6 +9,7 @@
   "naming_series",
   "customer",
   "mietvertrag",
+  "ref_nr",
   "column_break_3",
   "contact",
   "contact_2",
@@ -125,10 +126,20 @@
    "fieldname": "k_details",
    "fieldtype": "Text Editor",
    "label": "Textinhalt Details"
+  },
+  {
+   "fetch_from": "mietvertrag.ref_link",
+   "fetch_if_empty": 1,
+   "fieldname": "ref_nr",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Ref.Nr.",
+   "read_only": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2021-08-13 13:30:30.893994",
+ "modified": "2021-09-01 07:33:08.316696",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Kuendigung",
