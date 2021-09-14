@@ -16,6 +16,7 @@
    "fieldname": "total_object",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Gesamtobjekt",
    "options": "Gesamtobjekt",
    "reqd": 1
@@ -23,12 +24,14 @@
   {
    "fieldname": "name_title",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Name/Titel"
   },
   {
    "description": "Bsp. 1. OG / EG \n(alles GROSS, Abstand)",
    "fieldname": "floor",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Stockwerk"
   },
   {
@@ -44,7 +47,7 @@
    "label": "Nummer/Email"
   }
  ],
- "modified": "2021-08-13 13:28:53.603664",
+ "modified": "2021-09-14 15:10:01.268574",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Aushang",

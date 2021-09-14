@@ -1,0 +1,48 @@
+# -*- coding: utf-8 -*-
+# Copyright (c) 2021, Libracore AG and contributors
+# For license information, please see license.txt
+
+from __future__ import unicode_literals
+import frappe
+
+def cleanup_contacts():
+    dublicate_contacts = frappe.db.sql("""SELECT `user`, COUNT(*) FROM `tabContact` WHERE `user` IS NOT NULL GROUP BY `user` HAVING COUNT(*) > 1""", as_dict=True)
+    
+    for duplicate_contact in dublicate_contacts:
+        contacts = frappe.db.sql("""SELECT `name` FROM `tabContact` WHERE `user` = '{user}' ORDER BY `creation` ASC""".format(user=duplicate_contact.user), as_dict=True)
+        qty = len(contacts)
+        loop = 1
+        for _contact in contacts:
+            if loop < qty:
+                contact = frappe.get_doc("Contact", _contact.name)
+                contact.delete()
+                loop += 1
+
+@frappe.whitelist()
+def create_nachtrag(total_object, contract_start, contract_end):
+    
+    #get mietvertraege sort by most recent end_date per mietobjekt, for selected total_object
+    sql_query = """SELECT 
+                    `tabMietvertrag`.`name`,
+                    `tabMietvertrag`.`object_name`,
+                    `tabMietvertrag`.`contract_end`
+                    FROM `tabMietvertrag`
+                    WHERE `tabMietvertrag`.`total_object` = {total_object}
+                    AND `tabMietvertrag`.`docstatus` = 1
+                    ORDER BY `tabMietvertrag`.`total_object`, `tabMietvertrag`.`contract_end`, DESC"""
+    
+    frappe.db.sql(sql_query, as dict=1)
+    
+    #only create nachtraege for most recent end_date
+    object_name[0]
+    
+    for this_mietvertrag in mietvertraege:
+        mietvertrag = frappe.get_doc("Mietvertrag", this_mietvertrag)
+        nachtrag = frappe.get_doc(frappe.copy_doc(mietvertrag))
+        nachtrag.contract_type = 'Nachtrag'
+        nachtrag.contract_start = mietvertrag.contract_start #Wert aus Dialog befüllen
+        nachtrag.contract_end = mietvertrag.contract_end  #Wert aus Dialog befüllen
+        nachtrag.mietvertrag = mietvertrag.mietvertrag if contract_type = 'Nachtrag' else mietvertrag.name
+        #werte aus dialog reinnehmen? wie?
+        
+    mietvertrag.insert()                                    

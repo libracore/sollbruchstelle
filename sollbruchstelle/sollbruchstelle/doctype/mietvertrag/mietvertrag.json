@@ -54,7 +54,7 @@
    "fieldname": "customer",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Customer",
+   "label": "Customer 1",
    "options": "Customer",
    "reqd": 1
   },
@@ -102,6 +102,7 @@
    "fetch_from": "mietobjekt.total_object",
    "fieldname": "total_object",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Gesamtobjekt",
    "options": "Gesamtobjekt",
    "reqd": 1
@@ -222,10 +223,9 @@
    "fieldtype": "Column Break"
   },
   {
-   "default": "Customer",
    "fieldname": "customer_2",
    "fieldtype": "Link",
-   "label": "Customer",
+   "label": "Customer 2",
    "options": "Customer"
   },
   {
@@ -269,7 +269,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2021-09-01 17:15:21.305067",
+ "modified": "2021-09-14 15:14:00.945633",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",
@@ -302,6 +302,7 @@
    "write": 1
   }
  ],
+ "search_fields": "ref_link",
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1
