@@ -49,9 +49,9 @@ def get_data(filters):
         FROM `tabMietvertrag`
         LEFT JOIN `tabMietobjekte` ON `tabMietvertrag`.`name` = `tabMietobjekte`.`parent`
         LEFT JOIN `tabMietobjekt` ON `tabMietvertrag`.`object_name` = `tabMietobjekt`.`name`
-        WHERE `tabMietvertrag`.`docstatus` < 2
-        AND `tabMietvertrag`.`contract_start` > '{date}'
-        OR `tabMietvertrag`.`contract_end` < '{date}'{additional_filters}
+        WHERE `tabMietvertrag`.`docstatus` < 2 {additional_filters}
+        AND (`tabMietvertrag`.`contract_start` > '{date}'
+        OR `tabMietvertrag`.`contract_end` < '{date}')
         """.format(date=filters.date, additional_filters=additional_filters)
         
     data = frappe.db.sql(sql_query, as_dict=1)

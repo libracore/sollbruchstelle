@@ -18,21 +18,34 @@ def cleanup_contacts():
                 contact.delete()
                 loop += 1
 
-#@frappe.whitelist()
-#def create_nachtrag(total_object, contract_start, contract_end):
-#    mietvertrag = frappe.get_doc({
-#        "doctype": "Mietvertrag",
-#        "contract_type": "Nachtrag",
-#        "contract_start": contract_start,
-#        "contract_end": contract_end
-#    })
-#    mietvertrag.insert()                                    
-#    
-#    return mietvertrag.name
+@frappe.whitelist()
+def create_nachtrag(total_object, contract_start, contract_end):
 
-# def get_contracts():
-    # #get all contracts for selected total_object
-    # sql_query = """SELECT FROM `tabMietvertrag` WHERE `tabMietvertrag`.`total_object` = {total_object} AND `tabMietvertrag`.`docstatus` = 2
-    # ;"""
-    # frappe.db.sql(sql_query, as dict=1)
-    # return
+    whgen = frappe.get_all('Mietobjekt',
+        filters={
+            'total_object': total_object
+        },
+        fields=['name'])
+    for whg in whgen:
+        mietvertrag = frappe.get_all('Mietvertrag', ["name"],
+        filters={
+            'object_name': whg.name,
+            'docstatus': 1
+        },
+        order_by="creation desc", limit_page_length=1)
+        if len(mietvertrag) > 0:
+            mietvertrag = frappe.get_doc("Mietvertrag", mietvertrag[0]["name"])
+            nachtrag = frappe.get_doc(frappe.copy_doc(mietvertrag))
+            nachtrag.contract_type = 'Nachtrag'
+            nachtrag.contract_start = contract_start
+            nachtrag.contract_end = contract_end
+            naming_series = 'NM-.#####' if mietvertrag.contract_type == 'Nachtrag' else 'MV-.#####'
+            #linkfield to mietvertrag
+            nachtrag.mietvertrag = mietvertrag.name
+            #mietvertrag.mietvertrag if mietvertrag.contract_type == 'Nachtrag' else mietvertrag.name
+            try:
+                nachtrag.insert()
+            except Exception as err:
+                frappe.log_error("Unable to create {0} ({1})".format(nachtrag.as_dict(), err), "Nachtrag erstellen fehlgeschlagen")
+    
+    return                                
