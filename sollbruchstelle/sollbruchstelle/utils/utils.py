@@ -39,10 +39,9 @@ def create_nachtrag(total_object, contract_start, contract_end):
             nachtrag.contract_type = 'Nachtrag'
             nachtrag.contract_start = contract_start
             nachtrag.contract_end = contract_end
-            naming_series = 'NM-.#####' if mietvertrag.contract_type == 'Nachtrag' else 'MV-.#####'
+            nachtrag.naming_series = 'NM-.#####'
             #linkfield to mietvertrag
             nachtrag.mietvertrag = mietvertrag.name
-            #mietvertrag.mietvertrag if mietvertrag.contract_type == 'Nachtrag' else mietvertrag.name
             try:
                 nachtrag.insert()
             except Exception as err:
