@@ -15,6 +15,7 @@
   "project",
   "customer",
   "customer_2",
+  "language",
   "column_break_4",
   "contact",
   "contact_2",
@@ -266,11 +267,20 @@
    "fieldtype": "Link",
    "label": "Link zum Mietvertrag",
    "options": "Mietvertrag"
+  },
+  {
+   "fetch_from": "customer.language",
+   "fetch_if_empty": 1,
+   "fieldname": "language",
+   "fieldtype": "Link",
+   "label": "Language",
+   "options": "Language",
+   "read_only": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2021-09-14 15:14:00.945633",
- "modified_by": "Administrator",
+ "modified": "2021-09-15 08:06:49.527016",
+ "modified_by": "nicole.gret@libracore.com",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",
  "owner": "Administrator",
