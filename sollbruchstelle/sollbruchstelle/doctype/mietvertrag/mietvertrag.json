@@ -254,7 +254,7 @@
    "label": "1 Ref. Nr."
   },
   {
-   "fetch_from": "gesamtobjekt.project_name",
+   "fetch_from": "total_object.project_name",
    "fetch_if_empty": 1,
    "fieldname": "project",
    "fieldtype": "Data",
@@ -279,7 +279,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2021-09-15 15:55:46.735854",
+ "modified": "2021-09-21 15:19:46.565134",
  "modified_by": "nicole.gret@libracore.com",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",
