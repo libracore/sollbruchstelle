@@ -51,6 +51,7 @@ def generate_sinv(doc):
         # second_row.rate = i.rate / 2
         
         
+
     if mietvertrag.setup_fee and mietvertrag.parking == 0:
        third_row = sinv.append("items", {})
        third_row.item_code = "A000"
