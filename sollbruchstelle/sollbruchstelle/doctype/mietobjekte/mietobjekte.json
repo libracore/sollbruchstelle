@@ -8,12 +8,12 @@
   "floor",
   "reference_nr",
   "rate",
+  "size",
   "mailbox",
   "doorlabel",
   "outside_label",
   "room_cleaning",
-  "internet",
-  "data_10"
+  "internet"
  ],
  "fields": [
   {
@@ -87,12 +87,15 @@
    "read_only": 1
   },
   {
-   "fieldname": "data_10",
-   "fieldtype": "Data"
+   "fetch_from": "object_name.size",
+   "fetch_if_empty": 1,
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "label": "Gr\u00f6sse"
   }
  ],
  "istable": 1,
- "modified": "2021-08-03 08:12:23.571314",
+ "modified": "2021-09-30 11:37:22.151770",
  "modified_by": "nicole.gret@libracore.com",
  "module": "Sollbruchstelle",
  "name": "Mietobjekte",
