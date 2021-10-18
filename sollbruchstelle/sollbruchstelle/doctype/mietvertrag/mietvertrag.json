@@ -26,6 +26,8 @@
   "object_name",
   "ref_link",
   "mietobjekte",
+  "section_break_22",
+  "notiz_bruttomietzins",
   "section_break_2",
   "title",
   "contract_start",
@@ -284,11 +286,20 @@
    "fieldname": "parking",
    "fieldtype": "Check",
    "label": "Parkplatz (keine Aufschaltgeb\u00fchren)"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "notiz_bruttomietzins",
+   "fieldtype": "Data",
+   "label": "Notiz Bruttomietzins"
   }
  ],
  "is_submittable": 1,
- "modified": "2021-09-23 14:41:47.584584",
- "modified_by": "nicole.gret@libracore.com",
+ "modified": "2021-10-18 14:15:18.127983",
+ "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",
  "owner": "Administrator",
