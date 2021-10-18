@@ -27,7 +27,7 @@
   "ref_link",
   "mietobjekte",
   "section_break_22",
-  "notiz_bruttomietzins",
+  "note_brutto",
   "section_break_2",
   "title",
   "contract_start",
@@ -292,13 +292,13 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "notiz_bruttomietzins",
+   "fieldname": "note_brutto",
    "fieldtype": "Data",
-   "label": "Notiz Bruttomietzins"
+   "label": "Bruttomietzins Notiz"
   }
  ],
  "is_submittable": 1,
- "modified": "2021-10-18 14:15:18.127983",
+ "modified": "2021-10-18 14:38:58.216979",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",
