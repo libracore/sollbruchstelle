@@ -19,7 +19,7 @@ def cleanup_contacts():
                 loop += 1
 
 @frappe.whitelist()
-def create_nachtrag(total_object, contract_start, contract_end):
+def create_nachtrag(total_object, contract_start, contract_end, notice_period, old_contract_end):
 
     whgen = frappe.get_all('Mietobjekt',
         filters={
@@ -27,18 +27,21 @@ def create_nachtrag(total_object, contract_start, contract_end):
         },
         fields=['name'])
     for whg in whgen:
-        mietvertrag = frappe.get_all('Mietvertrag', ["name"],
+        mietvertraege = frappe.get_all('Mietvertrag', ["name"],
         filters={
             'object_name': whg.name,
             'docstatus': 1
         },
         order_by="creation desc", limit_page_length=1)
-        if len(mietvertrag) > 0:
-            mietvertrag = frappe.get_doc("Mietvertrag", mietvertrag[0]["name"])
+        if len(mietvertraege) > 0:
+            mietvertrag = frappe.get_doc("Mietvertrag", mietvertraege[0]["name"])
             nachtrag = frappe.get_doc(frappe.copy_doc(mietvertrag))
             nachtrag.contract_type = 'Nachtrag'
             nachtrag.contract_start = contract_start
             nachtrag.contract_end = contract_end
+            nachtrag.notice_period = notice_period
+            nachtrag.old_contract_end = old_contract_end
+            nachtrag.nachtrag_nr = len(mietvertraege)
             nachtrag.naming_series = 'NM-.#####'
             #linkfield to mietvertrag
             nachtrag.mietvertrag = mietvertrag.name
