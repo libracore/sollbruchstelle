@@ -11,23 +11,25 @@ frappe.ui.form.on('Email Group', {
 
 function total_object_prompt(frm) {
     frappe.prompt([
-            {'fieldname': 'total_object', 'fieldtype': 'Link', 'options': 'Gesamtobjekt', 'label': 'Gesamtobjekt', 'reqd': 1}  
+            {'fieldname': 'total_object', 'fieldtype': 'Link', 'options': 'Gesamtobjekt', 'label': 'Gesamtobjekt', 'reqd': 1},
+            {'fieldname': 'list_type', 'fieldtype': 'Select', 'options': 'Mieter\nMieter und Untermieter\nAlle', 'default': 'Mieter', 'label': 'Zielgruppe', 'reqd': 1}  
         ],
         function(values){
-            fetch_subscribers(values.total_object);
+            fetch_subscribers(values.total_object, values.list_type);
         },
         'Gesamtobjekt',
         'Auswählen'
     )
 }
 
-function fetch_subscribers(total_object) {
+function fetch_subscribers(total_object, list_type) {
     if (total_object) {
         frappe.call({
             method: 'sollbruchstelle.sollbruchstelle.newsletter.newsletter.get_subscribers',
             args: {
                 'total_object': total_object,
-                'email_group': cur_frm.doc.name
+                'email_group': cur_frm.doc.name,
+                'list_type': list_type
             },
             callback: function(r) {
                 if(r.message) {
