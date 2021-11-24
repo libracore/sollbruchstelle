@@ -35,19 +35,30 @@ def create_nachtrag(total_object, contract_start, contract_end, notice_period, o
         order_by="creation desc", limit_page_length=1)
         if len(mietvertraege) > 0:
             mietvertrag = frappe.get_doc("Mietvertrag", mietvertraege[0]["name"])
-            nachtrag = frappe.get_doc(frappe.copy_doc(mietvertrag))
-            nachtrag.contract_type = 'Nachtrag'
-            nachtrag.contract_start = contract_start
-            nachtrag.contract_end = contract_end
-            nachtrag.notice_period = notice_period
-            nachtrag.old_contract_end = old_contract_end
-            nachtrag.nachtrag_nr = len(mietvertraege)
-            nachtrag.naming_series = 'NM-.#####'
-            #linkfield to mietvertrag
-            nachtrag.mietvertrag = mietvertrag.name
-            try:
-                nachtrag.insert()
-            except Exception as err:
-                frappe.log_error("Unable to create {0} ({1})".format(nachtrag.as_dict(), err), "Nachtrag erstellen fehlgeschlagen")
-    
+            #only create if ungekuendigt
+            kuendigungen = frappe.get_all("Kuendigung", ["name"],
+            filters={
+                'mietvertrag': mietvertrag.name,
+                'docstatus': 1
+            })
+            if len(kuendigungen) == 0:
+                nachtrag = frappe.get_doc(frappe.copy_doc(mietvertrag))
+                nachtrag.contract_type = 'Nachtrag'
+                nachtrag.contract_start = contract_start
+                nachtrag.contract_end = contract_end
+                nachtrag.notice_period = notice_period
+                nachtrag.old_contract_end = old_contract_end
+                nachtrag.nachtrag_nr = len(mietvertraege)
+                nachtrag.naming_series = 'NM-.#####'
+                #linkfield to mietvertrag
+                nachtrag.mietvertrag = mietvertrag.name
+                try:
+                    nachtrag.insert()
+                except Exception as err:
+                    frappe.log_error("Unable to create {0} ({1})".format(nachtrag.as_dict(), err), "Nachtrag erstellen fehlgeschlagen")
+                try:
+                    mietvertrag.replaced = 1
+                    mietvertrag.save()
+                except Exception as err:
+                    frappe.log_error("Unable to create {0} ({1})".format(mietvertrag.as_dict(), err), "Mietvertrag Updatefehlgeschlagen") 
     return                                
