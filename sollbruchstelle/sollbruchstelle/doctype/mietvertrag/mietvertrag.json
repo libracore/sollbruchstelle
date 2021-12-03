@@ -18,7 +18,9 @@
   "language",
   "column_break_4",
   "contact",
+  "email_id",
   "contact_2",
+  "email_id_2",
   "creation_date",
   "signature_date",
   "object_section",
@@ -295,10 +297,24 @@
    "fieldname": "note_brutto",
    "fieldtype": "Data",
    "label": "Bruttomietzins Notiz"
+  },
+  {
+   "fetch_from": "contact.email_id",
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email Mieter 1",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "contact_2.email_id",
+   "fieldname": "email_id_2",
+   "fieldtype": "Data",
+   "label": "Email Mieter 2",
+   "read_only": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2021-10-18 14:38:58.216979",
+ "modified": "2021-12-03 09:48:54.742472",
  "modified_by": "Administrator",
  "module": "Sollbruchstelle",
  "name": "Mietvertrag",
